@@ -191,17 +191,17 @@
         animation: slide-flow-in 0.5s cubic-bezier(0.25,0.46,0.45,0.94) forwards,
                    slide-slow-zoom 3s ease-out 0.4s forwards;
       }
-      /* Progress bar — floating thin line with padding from all edges */
-      /* Progress bar — thick red bar at the bottom INSIDE the hero photo */
+      /* Progress bar — thick red bar inside hero photo, with side padding */
       .slider-progress-bar-track {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 6px;
-        background: rgba(255,255,255,0.18);
+        bottom: 24px;
+        left: 32px;
+        right: 32px;
+        height: 5px;
+        background: rgba(255,255,255,0.25);
         z-index: 50;
-        overflow: hidden;
+        border-radius: 3px;
+        overflow: visible;
       }
       .slider-progress-bar {
         position: absolute;
@@ -209,13 +209,15 @@
         left: 0;
         height: 100%;
         background: linear-gradient(90deg, #ff3333 0%, #ff6666 80%, #ff9999 100%);
-        box-shadow: 0 0 14px rgba(255,51,51,0.9), 0 0 5px rgba(255,51,51,0.7);
+        box-shadow: 0 0 10px rgba(255,51,51,0.9), 0 0 4px rgba(255,51,51,0.6);
         width: 0%;
+        border-radius: 3px;
         transition: none;
+        will-change: width;
       }
       .slider-progress-bar.animating {
-        transition: width 6s linear;
-        width: 100%;
+        transition: width 6s linear !important;
+        width: 100% !important;
       }
 
       /* Slider marquee ticker — driven by GSAP + scroll velocity */
