@@ -192,15 +192,15 @@
                    slide-slow-zoom 3s ease-out 0.4s forwards;
       }
       /* Progress bar — floating thin line with padding from all edges */
+      /* Progress bar — thick red bar at the bottom INSIDE the hero photo */
       .slider-progress-bar-track {
         position: absolute;
-        bottom: 20px;
-        left: 24px;
-        right: 24px;
-        height: 2px;
-        background: rgba(255,255,255,0.2);
-        z-index: 40;
-        border-radius: 2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: rgba(255,255,255,0.18);
+        z-index: 50;
         overflow: hidden;
       }
       .slider-progress-bar {
@@ -208,10 +208,10 @@
         top: 0;
         left: 0;
         height: 100%;
-        background: rgba(255,255,255,0.85);
+        background: linear-gradient(90deg, #ff3333 0%, #ff6666 80%, #ff9999 100%);
+        box-shadow: 0 0 14px rgba(255,51,51,0.9), 0 0 5px rgba(255,51,51,0.7);
         width: 0%;
         transition: none;
-        border-radius: 2px;
       }
       .slider-progress-bar.animating {
         transition: width 6s linear;
@@ -324,6 +324,20 @@
       .l-tr { top: 0px; right: 0px; border-width: 2px 2px 0 0; }
       .l-bl { bottom: 0px; left: 0px; border-width: 0 0 2px 2px; }
       .l-br { bottom: 0px; right: 0px; border-width: 0 2px 2px 0; }
+
+      /* About section text shadows */
+      #about h2, #about h4 {
+        text-shadow: 0 2px 20px rgba(0,0,0,0.85), 0 1px 6px rgba(0,0,0,0.6);
+      }
+      #about p, #about li, #about a {
+        text-shadow: 0 1px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7);
+      }
+      #about .stat-number, #about .stat-number-inner {
+        text-shadow: 0 2px 16px rgba(0,0,0,0.9), 0 1px 6px rgba(0,0,0,0.7);
+      }
+      #about svg {
+        filter: drop-shadow(0 1px 6px rgba(0,0,0,0.8));
+      }
 
       /* Japanese Work Title Adjustment */
       body.lang-jp [data-key="Index.Work.Title"] {
@@ -939,29 +953,28 @@
     </section>
 
     <!-- Session 4: About Us -->
-    <section class="relative py-16 md:py-32 px-6 bg-brand-black text-white overflow-hidden" id="about">
+    <section class="relative py-16 md:py-32 px-6 bg-brand-black text-white" id="about" style="min-height:100vh; display:flex; flex-direction:column; justify-content:space-between;">
       <!-- Apple-style scroll-driven video background -->
       <div class="absolute inset-0 z-0 overflow-hidden">
-        <canvas id="about-scroll-canvas" class="w-full h-full object-cover"></canvas>
-        <div class="absolute inset-0 bg-black/50"></div>
+        <canvas id="about-scroll-canvas" class="absolute inset-0 w-full h-full"></canvas>
       </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto flex flex-col h-full">
+      <div class="relative z-10 max-w-7xl mx-auto flex flex-col w-full" style="flex:1; justify-content:space-between; gap:2rem;">
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-16 mb-12 md:mb-24">
           <!-- Left: Header & Intro + Lists -->
           <div class="lg:col-span-7 flex flex-col justify-center">
-            <h2 class="font-oswald text-3xl md:text-6xl lg:text-7xl uppercase leading-[0.9] font-bold mb-3 md:mb-8 tracking-tighter text-white" data-key="Index.About.Title">
+            <h2 class="font-oswald text-3xl md:text-6xl lg:text-7xl uppercase leading-[0.9] font-bold mb-3 md:mb-8 tracking-tighter text-white" data-key="Index.About.Title" style="text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 1px 6px rgba(0,0,0,0.6);">
               LIFESTYLE RESONANCE. <br>
               <span class="text-brand-red">INSTITUTIONAL RIGOR.</span>
             </h2>
-            <p class="font-playfair italic text-[14px] md:text-[18px] leading-relaxed text-white max-w-2xl mb-4 md:mb-0" data-key="Index.About.Subtitle">
+            <p class="font-playfair italic text-[14px] md:text-[18px] leading-relaxed text-white max-w-2xl mb-4 md:mb-0" data-key="Index.About.Subtitle" style="text-shadow: 0 1px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7);">
               Shaping Hong Kong's PR scene since 2007, we specialize in the art of the engagement. From the buzz of the city's biggest lifestyle launches to our role as PR consultants for the Buildings Department since 2023, we create the strategies that make institutions feel human and brands feel essential.
             </p>
           </div>
 
           <!-- Right: Mega Menu — Card Layout for Mobile -->
-          <div class="lg:col-span-5 grid grid-cols-2 gap-4 md:gap-12 pt-0 md:pt-4 service-card-container">
+          <div id="about-service-cards" class="lg:col-span-5 grid grid-cols-2 gap-4 md:gap-12 pt-0 md:pt-4 service-card-container">
             <div class="service-card bg-black/40 backdrop-blur-md p-5 md:p-8 rounded-2xl border border-white/10">
               <h4 class="font-oswald text-xs md:text-sm font-bold uppercase tracking-widest text-brand-red mb-3 md:mb-6 border-b border-white/20 pb-2 md:pb-4" data-key="Global.Navigation.WhoWeHelp">Who We Help</h4>
               <ul class="space-y-2 md:space-y-4 font-sans text-[11px] md:text-[14px] text-white">
@@ -985,21 +998,21 @@
         </div>
 
         <!-- Infographic Stats — Card Layout for Mobile -->
-        <div class="grid grid-cols-3 md:grid-cols-3 border border-white/10 bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden">
+        <div id="about-stats-bar" class="grid grid-cols-3 md:grid-cols-3 border border-white/10 bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden">
           <div class="border-r border-white/10 md:border-white/20 p-3 md:p-8 flex flex-col items-center justify-center text-center">
             <svg class="w-5 md:w-8 h-5 md:h-8 mb-1 md:mb-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             <div class="font-oswald text-lg md:text-5xl text-white mb-0 md:mb-2 font-bold stat-number" data-stat="years" data-start="9" data-end="18" data-duration="2.5s"><span class="stat-number-inner">18+</span></div>
-            <div class="font-sans text-[8px] md:text-xs uppercase tracking-widest text-gray-300 leading-tight" data-key="Index.About.Stats1">Years<br>Experience</div>
+            <div class="font-sans text-[8px] md:text-xs uppercase tracking-widest text-gray-300 leading-tight" data-key="Index.About.Stats1" style="text-shadow: 0 1px 8px rgba(0,0,0,0.9);">Years<br>Experience</div>
           </div>
           <div class="border-r border-white/10 md:border-white/20 p-3 md:p-8 flex flex-col items-center justify-center text-center">
             <svg class="w-5 md:w-8 h-5 md:h-8 mb-1 md:mb-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             <div class="font-oswald text-lg md:text-5xl text-white mb-0 md:mb-2 font-bold stat-number" data-stat="projects" data-start="180" data-end="360" data-duration="2.8s"><span class="stat-number-inner">360+</span></div>
-            <div class="font-sans text-[8px] md:text-xs uppercase tracking-widest text-gray-300 leading-tight" data-key="Index.About.Stats2">Projects<br>Delivered</div>
+            <div class="font-sans text-[8px] md:text-xs uppercase tracking-widest text-gray-300 leading-tight" data-key="Index.About.Stats2" style="text-shadow: 0 1px 8px rgba(0,0,0,0.9);">Projects<br>Delivered</div>
           </div>
           <div class="p-3 md:p-8 flex flex-col items-center justify-center text-center">
             <svg class="w-5 md:w-8 h-5 md:h-8 mb-1 md:mb-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <div class="font-oswald text-lg md:text-5xl text-white mb-0 md:mb-2 font-bold stat-number" data-stat="people" data-start="1.0" data-end="1.5" data-duration="3s" data-suffix="M+"><span class="stat-number-inner">1.5M+</span></div>
-            <div class="font-sans text-[8px] md:text-xs uppercase tracking-widest text-gray-300 leading-tight" data-key="Index.About.Stats3">People<br>Engaged</div>
+            <div class="font-sans text-[8px] md:text-xs uppercase tracking-widest text-gray-300 leading-tight" data-key="Index.About.Stats3" style="text-shadow: 0 1px 8px rgba(0,0,0,0.9);">People<br>Engaged</div>
           </div>
         </div>
 
@@ -1411,88 +1424,125 @@
         delay: 0.2
       });
 
-      // ── Apple-style scroll-driven canvas animation ──────────────────────
-      (function() {
-        const canvas = document.getElementById('about-scroll-canvas');
-        const ctx = canvas.getContext('2d');
-        const FRAME_COUNT = 96;
-        const FRAME_PATH = 'data/images/about-frames/frame_';
-        
-        // Preload all frames
-        const frames = [];
-        let loadedCount = 0;
-        let animationReady = false;
-        
-        function padNum(n) {
-          return String(n).padStart(4, '0');
-        }
-        
+      // ── Apple-style scroll-driven canvas animation (96 frames, 4s video) ──
+      (function () {
+        var canvas = document.getElementById('about-scroll-canvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var FRAME_COUNT = 96;
+        var frames = [];
+        var loadedCount = 0;
+        var currentFrame = 0;
+        var animationReady = false;
+        function padNum(n) { return String(n).padStart(4, '0'); }
         function resizeCanvas() {
-          canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-          canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-          ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-          if (animationReady) renderFrame(currentFrame);
+          canvas.width  = canvas.offsetWidth  * (window.devicePixelRatio || 1);
+          canvas.height = canvas.offsetHeight * (window.devicePixelRatio || 1);
+          if (animationReady) drawFrame(currentFrame);
         }
-        
-        let currentFrame = 0;
-        
-        function renderFrame(index) {
-          const img = frames[index];
-          if (!img || !img.complete) return;
-          const cw = canvas.offsetWidth;
-          const ch = canvas.offsetHeight;
-          const iw = img.naturalWidth;
-          const ih = img.naturalHeight;
-          // Cover fit
-          const scale = Math.max(cw / iw, ch / ih);
-          const sw = iw * scale;
-          const sh = ih * scale;
-          const sx = (cw - sw) / 2;
-          const sy = (ch - sh) / 2;
-          ctx.clearRect(0, 0, cw, ch);
+        function drawFrame(index) {
+          var img = frames[index];
+          if (!img || !img.complete || !img.naturalWidth) return;
+          var dpr = window.devicePixelRatio || 1;
+          var cw = canvas.offsetWidth;
+          var ch = canvas.offsetHeight;
+          var iw = img.naturalWidth;
+          var ih = img.naturalHeight;
+          var scale = Math.max(cw / iw, ch / ih);
+          var sw = iw * scale;
+          var sh = ih * scale;
+          var sx = (cw - sw) / 2;
+          var sy = (ch - sh) / 2;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.save();
+          ctx.scale(dpr, dpr);
           ctx.drawImage(img, sx, sy, sw, sh);
+          ctx.restore();
         }
-        
-        // Load frames
-        for (let i = 1; i <= FRAME_COUNT; i++) {
-          const img = new Image();
-          img.src = FRAME_PATH + padNum(i) + '.webp';
-          img.onload = function() {
-            loadedCount++;
-            if (loadedCount === FRAME_COUNT) {
-              animationReady = true;
-              resizeCanvas();
-              renderFrame(0);
-            }
-          };
-          frames.push(img);
+        for (var i = 1; i <= FRAME_COUNT; i++) {
+          (function (idx) {
+            var img = new Image();
+            img.src = 'data/images/about-frames/frame_' + padNum(idx) + '.webp';
+            img.onload = function () {
+              loadedCount++;
+              if (loadedCount === FRAME_COUNT) {
+                animationReady = true;
+                resizeCanvas();
+                drawFrame(0);
+              }
+            };
+            frames[idx - 1] = img;
+          })(i);
         }
-        
-        // Scroll-driven animation using GSAP ScrollTrigger
         gsap.to({ frame: 0 }, {
           frame: FRAME_COUNT - 1,
-          snap: 'frame',
           ease: 'none',
           scrollTrigger: {
             trigger: '#about',
             start: 'top top',
-            end: '+=300%',
+            end: '+=250%',
             pin: true,
             scrub: 0.5,
             anticipatePin: 1,
           },
-          onUpdate: function() {
-            const f = Math.round(this.targets()[0].frame);
+          onUpdate: function () {
+            var f = Math.min(FRAME_COUNT - 1, Math.max(0, Math.round(this.targets()[0].frame)));
             if (f !== currentFrame) {
               currentFrame = f;
-              renderFrame(currentFrame);
+              drawFrame(currentFrame);
             }
           }
         });
-        
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
       })();
+
+      // ── About section: slide-in animations ──────────────────────────────
+      // Right-side service cards: slide in from right when About section is pinned
+      gsap.fromTo('#about-service-cards',
+        { x: 120, opacity: 0 },
+        {
+          x: 0, opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '#about',
+            start: 'top top',
+            toggleActions: 'play none none reverse',
+          }
+        }
+      );
+
+      // Stagger each service card individually for a cascade effect
+      gsap.fromTo('.service-card',
+        { x: 100, opacity: 0 },
+        {
+          x: 0, opacity: 1,
+          duration: 0.8,
+          ease: 'power3.out',
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: '#about',
+            start: 'top top',
+            toggleActions: 'play none none reverse',
+          }
+        }
+      );
+
+      // Bottom stats bar: slide in from left
+      gsap.fromTo('#about-stats-bar',
+        { x: -120, opacity: 0 },
+        {
+          x: 0, opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '#about',
+            start: 'top top',
+            toggleActions: 'play none none reverse',
+          }
+        }
+      );
 
       // 3D Logo Parallax — scroll-accumulated rotateY, no spring-back
       // Logo 1 (right): rotates right→left (positive→negative rotateY) as you scroll down
