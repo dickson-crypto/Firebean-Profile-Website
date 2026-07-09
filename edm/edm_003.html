@@ -4,273 +4,327 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Firebean EDM — Issue 003 | Experiential vs Traditional: The Data That Should Change Your Next Campaign Budget</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: #EBEBEB; font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-    .email-wrapper { width: 100%; background-color: #EBEBEB; padding: 32px 16px; }
-    .email-container { max-width: 620px; margin: 0 auto; background-color: #FFFFFF; border: 1px solid #E0E0E0; }
-    .pre-header { background-color: #F5F5F3; padding: 9px 24px; text-align: center; border-bottom: 1px solid #E8E8E4; }
-    .pre-header a { color: #888888; font-size: 11px; letter-spacing: 0.08em; text-decoration: none; }
-    .email-header { background-color: #FFFFFF; padding: 22px 32px 18px; border-bottom: 3px solid #E8291C; }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; }
-    .logo-block { display: flex; align-items: center; gap: 10px; }
-    .logo-icon-img { width: 36px; height: 36px; object-fit: contain; }
-    .logo-text { font-size: 18px; font-weight: 300; color: #111111; letter-spacing: 0.25em; text-transform: lowercase; font-variant: small-caps; }
-    .header-issue { font-size: 11px; color: #999999; letter-spacing: 0.08em; text-align: right; line-height: 1.5; }
-    .header-issue strong { color: #E8291C; display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; }
-    .hero-section { position: relative; background-color: #F0F0F0; overflow: hidden; }
-    .hero-image { width: 100%; display: block; height: 340px; object-fit: cover; }
-    .hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 65%); padding: 40px 32px 28px; }
-    .hero-tag { display: inline-block; background-color: #E8291C; color: #FFFFFF; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 10px; margin-bottom: 12px; }
-    .hero-title { font-size: 26px; font-weight: 900; color: #FFFFFF; line-height: 1.25; letter-spacing: -0.01em; max-width: 480px; }
-    .issue-intro { background-color: #FAFAFA; padding: 20px 32px 24px; border-bottom: 1px solid #EEEEEE; }
-    .issue-intro p { font-size: 13px; color: #555555; line-height: 1.75; }
-    .section-label { padding: 28px 32px 0; display: flex; align-items: center; gap: 12px; }
-    .section-label-line { flex: 1; height: 1px; background-color: #E8E8E4; }
-    .section-label-text { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #BBBBBB; white-space: nowrap; }
-    .case-card { padding: 20px 32px 32px; border-bottom: 1px solid #F0F0F0; background-color: #FFFFFF; }
-    .case-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
-    .case-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background-color: #E8291C; padding: 3px 8px; }
-    .case-tag-secondary { background-color: #111111; }
-    .case-client { font-size: 11px; color: #AAAAAA; letter-spacing: 0.04em; }
-    .case-image-wrap { width: 100%; overflow: hidden; margin-bottom: 18px; background-color: #F0F0F0; }
-    .case-image { width: 100%; display: block; height: 240px; object-fit: cover; }
-    .case-title { font-size: 20px; font-weight: 900; color: #111111; line-height: 1.3; margin-bottom: 8px; letter-spacing: -0.01em; }
-    .case-punchline { font-size: 13px; color: #666666; font-style: italic; line-height: 1.6; margin-bottom: 14px; padding-left: 12px; border-left: 3px solid #E8291C; }
-    .case-body { font-size: 13px; color: #444444; line-height: 1.75; margin-bottom: 18px; }
-    .case-body p { margin-bottom: 10px; }
-    .case-body ul { list-style: none; padding: 0; margin: 10px 0; }
-    .case-body li { font-size: 12px; color: #444444; line-height: 1.6; padding-left: 16px; position: relative; margin-bottom: 4px; }
-    .case-body li::before { content: '→'; position: absolute; left: 0; color: #E8291C; font-weight: 700; }
-    .case-outcomes { background-color: #F8F8F6; border-left: 3px solid #E8291C; padding: 14px 16px; margin-bottom: 18px; }
-    .case-outcomes-title { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #AAAAAA; margin-bottom: 8px; }
-    .case-cta { display: inline-block; border: 1.5px solid #111111; color: #111111; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 20px; text-decoration: none; }
-    .divider-red { background-color: #E8291C; height: 2px; }
-    .stats-strip { background-color: #111111; padding: 28px 32px; display: flex; justify-content: space-around; }
-    .stat-item { text-align: center; }
-    .stat-number { font-size: 28px; font-weight: 900; color: #FFFFFF; line-height: 1; display: block; }
-    .stat-number span { color: #E8291C; }
-    .stat-label { font-size: 10px; color: #888888; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 5px; }
-    .insight-section { background-color: #FAFAFA; padding: 32px; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #EEEEEE; }
-    .insight-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #BBBBBB; margin-bottom: 6px; }
-    .insight-topic-tag { display: inline-block; background-color: #E8291C; color: #FFFFFF; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; margin-bottom: 14px; }
-    .insight-image { width: 100%; display: block; height: 200px; object-fit: cover; margin-bottom: 18px; }
-    .insight-title { font-size: 20px; font-weight: 900; color: #111111; line-height: 1.3; margin-bottom: 8px; }
-    .insight-punchline { font-size: 13px; color: #666666; font-style: italic; line-height: 1.6; margin-bottom: 16px; padding-left: 12px; border-left: 3px solid #E8291C; }
-    .insight-body { font-size: 13px; color: #444444; line-height: 1.75; }
-    .insight-body p { margin-bottom: 10px; }
-    .insight-body ul { list-style: none; padding: 0; margin: 10px 0; }
-    .insight-body li { font-size: 12px; color: #444444; line-height: 1.6; padding-left: 16px; position: relative; margin-bottom: 6px; }
-    .insight-body li::before { content: '▸'; position: absolute; left: 0; color: #E8291C; }
-    .insight-source { font-size: 11px; color: #AAAAAA; margin-top: 12px; font-style: italic; }
-    .agency-cta-section { background-color: #FFFFFF; padding: 36px 32px; border-top: 4px solid #E8291C; }
-    .agency-cta-image { width: 100%; display: block; height: 200px; object-fit: cover; margin-bottom: 22px; }
-    .agency-cta-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E8291C; margin-bottom: 8px; }
-    .agency-cta-title { font-size: 22px; font-weight: 900; color: #111111; line-height: 1.25; margin-bottom: 10px; }
-    .agency-cta-punchline { font-size: 13px; color: #666666; font-style: italic; line-height: 1.6; margin-bottom: 16px; padding-left: 12px; border-left: 3px solid #E8291C; }
-    .agency-cta-body { font-size: 13px; color: #444444; line-height: 1.75; margin-bottom: 20px; }
-    .agency-cta-body p { margin-bottom: 10px; }
-    .agency-cta-body ul { list-style: none; padding: 0; margin: 10px 0; }
-    .agency-cta-body li { font-size: 12px; color: #444444; line-height: 1.6; padding-left: 16px; position: relative; margin-bottom: 6px; }
-    .agency-cta-body li::before { content: '→'; position: absolute; left: 0; color: #E8291C; }
-    .agency-cta-btn { display: inline-block; background-color: #E8291C; color: #FFFFFF; font-size: 12px; font-weight: 900; letter-spacing: 0.15em; text-transform: uppercase; padding: 13px 28px; text-decoration: none; margin-top: 20px; }
-    .contact-box { margin-top: 20px; padding: 16px; background: #F8F8F6; border-left: 3px solid #E8291C; }
-    .contact-box-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #AAAAAA; margin-bottom: 6px; }
-    .contact-box a { font-size: 13px; color: #E8291C; font-weight: 700; text-decoration: none; }
-    .email-footer { background-color: #F5F5F3; padding: 28px 32px 24px; border-top: 3px solid #E8291C; }
-    .footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
-    .footer-logo-img { width: 28px; height: 28px; object-fit: contain; }
-    .footer-logo-text { font-size: 14px; font-weight: 300; color: #111111; letter-spacing: 0.25em; text-transform: lowercase; font-variant: small-caps; }
-    .footer-divider { height: 1px; background-color: #E0E0E0; margin: 16px 0; }
-    .footer-links { display: flex; gap: 20px; margin-bottom: 14px; flex-wrap: wrap; }
-    .footer-links a { font-size: 11px; color: #666666; text-decoration: none; letter-spacing: 0.05em; }
-    .footer-address { font-size: 11px; color: #888888; line-height: 1.6; margin-bottom: 14px; }
-    .footer-legal { font-size: 10px; color: #AAAAAA; line-height: 1.6; }
-    .footer-legal a { color: #888888; text-decoration: underline; }
-    .footer-unsubscribe { font-size: 10px; color: #AAAAAA; margin-top: 10px; }
-    .footer-unsubscribe a { color: #888888; text-decoration: underline; }
-    @media (max-width: 640px) {
-      .email-wrapper { padding: 0; }
-      .email-container { max-width: 100%; border: none; }
-      .hero-title { font-size: 20px; }
-      .case-title, .insight-title, .agency-cta-title { font-size: 17px; }
-      .stats-strip { flex-direction: column; gap: 16px; }
-      .header-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
-    }
-  </style>
+  <title>Firebean EDM &mdash; Issue 003 | Experiential vs Traditional: The Data That Should Change Your Next Campaign Budget</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
 </head>
-<body>
-<div class="email-wrapper">
-<div class="email-container">
+<body style="margin:0;padding:0;background-color:#EBEBEB;font-family:'Helvetica Neue',Arial,sans-serif;">
+
+<!-- OUTER WRAPPER -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#EBEBEB" style="background-color:#EBEBEB;">
+<tr><td align="center" style="padding:32px 16px;">
+
+<!-- EMAIL CONTAINER -->
+<table width="620" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="max-width:620px;width:100%;background-color:#FFFFFF;border:1px solid #E0E0E0;">
 
   <!-- PRE-HEADER -->
-  <div class="pre-header">
-    <a href="https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_003.html" target="_blank">View this email in your browser &nbsp;|&nbsp; 在瀏覽器中查看</a>
-  </div>
+  <tr>
+    <td bgcolor="#F5F5F3" style="background-color:#F5F5F3;padding:9px 24px;text-align:center;border-bottom:1px solid #E8E8E4;" align="center">
+      <a href="https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_003.html" target="_blank" style="color:#888888;font-size:11px;letter-spacing:0.08em;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">View this email in your browser &nbsp;|&nbsp; &#22312;&#28993;&#35272;&#22120;&#20013;&#26597;&#30475;</a>
+    </td>
+  </tr>
 
-  <!-- HEADER -->
-  <div class="email-header">
-    <div class="header-inner">
-      <div class="logo-block">
-        <img class="logo-icon-img" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png" alt="Firebean Logo">
-        <div class="logo-text">firebean</div>
-      </div>
-      <div class="header-issue">
-        <strong>公關市場解碼</strong>
-        Issue 003 &nbsp;·&nbsp; 2026-07-28
-      </div>
-    </div>
-  </div>
+  <!-- HEADER: LOGO + ISSUE INFO -->
+  <tr>
+    <td bgcolor="#FFFFFF" style="background-color:#FFFFFF;padding:22px 32px 18px;border-bottom:3px solid #E8291C;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td valign="middle" style="vertical-align:middle;">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td valign="middle" style="padding-right:10px;">
+                  <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png" alt="Firebean" width="36" height="36" style="display:block;width:36px;height:36px;object-fit:contain;">
+                </td>
+                <td valign="middle">
+                  <span style="font-size:18px;font-weight:300;color:#111111;letter-spacing:0.25em;font-family:'Helvetica Neue',Arial,sans-serif;">FIREBEAN</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td align="right" valign="middle" style="text-align:right;vertical-align:middle;">
+            <span style="color:#E8291C;display:block;font-size:12px;font-weight:700;letter-spacing:0.12em;font-family:'Helvetica Neue',Arial,sans-serif;">&#20844;&#38364;&#24066;&#22580;&#35299;&#30908;</span>
+            <span style="font-size:11px;color:#999999;letter-spacing:0.08em;font-family:'Helvetica Neue',Arial,sans-serif;">Issue 003 &nbsp;&middot;&nbsp; 2026-07-28</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-  <!-- HERO -->
-  <div class="hero-section">
-    <img class="hero-image" src="https://drive.google.com/uc?id=1M9-ezE1vtg__iIIVsx2tTB4DVgGt0cVZ&export=view" alt="鬱金香花海 Hong Kong Flower Show 2025">
-    <div class="hero-overlay">
-      <div class="hero-tag">Government &amp; Public Sector</div>
-      <div class="hero-title">Experiential vs Traditional: The Data That Should Change Your Next Campaign Budget</div>
-    </div>
-  </div>
+  <!-- HERO IMAGE -->
+  <tr>
+    <td style="padding:0;margin:0;line-height:0;font-size:0;" bgcolor="#111111">
+      <div style="position:relative;">
+        <img src="https://drive.google.com/uc?id=1M9-ezE1vtg__iIIVsx2tTB4DVgGt0cVZ&export=view" alt="鬱金香花海 Hong Kong Flower Show 2025" width="620" style="display:block;width:100%;max-width:620px;height:auto;min-height:300px;object-fit:cover;">
+        <div style="background-color:rgba(0,0,0,0.55);padding:28px 32px 24px;">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td>
+                <div style="display:inline-block;background-color:#E8291C;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px;margin-bottom:12px;font-family:'Helvetica Neue',Arial,sans-serif;">GOVERNMENT &amp; PUBLIC SECTOR</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="font-size:24px;font-weight:900;color:#FFFFFF;line-height:1.25;letter-spacing:-0.01em;max-width:480px;font-family:'Helvetica Neue',Arial,sans-serif;">Experiential vs Traditional: The Data That Should Change Your Next Campaign Budget</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </td>
+  </tr>
 
   <!-- ISSUE INTRO -->
-  <div class="issue-intro">
-    <p>Welcome to Issue 003 of <strong style="color:#111111;">公關市場解碼</strong> — Firebean's insider briefing on what's actually working in Hong Kong's PR and experiential marketing landscape. This issue: two campaigns that turned passive audiences into active advocates, a market trend you can't afford to ignore, and a direct case for why Firebean is your next strategic partner.</p>
-  </div>
+  <tr>
+    <td bgcolor="#FAFAFA" style="background-color:#FAFAFA;padding:20px 32px 24px;border-bottom:1px solid #EEEEEE;">
+      <p style="margin:0;font-size:13px;color:#555555;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Welcome to Issue 003 of <strong style="color:#111111;">&#20844;&#38364;&#24066;&#22580;&#35299;&#30908;</strong> &mdash; Firebean&rsquo;s insider briefing on what&rsquo;s actually working in Hong Kong&rsquo;s PR and experiential marketing landscape. This issue: two campaigns that turned passive audiences into active advocates, a market trend you can&rsquo;t afford to ignore, and a direct case for why Firebean is your next strategic partner.</p>
+    </td>
+  </tr>
 
-  <!-- SECTION 01 — CASE STUDY: GOVERNMENT -->
-  <div class="section-label">
-    <div class="section-label-text">Section 01 — Case Study</div>
-    <div class="section-label-line"></div>
-  </div>
-  <div class="case-card">
-    <div class="case-meta">
-      <div class="case-tag">Government</div>
-      <div class="case-client">LCSD 康文署</div>
-    </div>
-    <div class="case-image-wrap">
-      <img class="case-image" src="https://drive.google.com/uc?id=1M9-ezE1vtg__iIIVsx2tTB4DVgGt0cVZ&export=view" alt="鬱金香花海 Hong Kong Flower Show 2025">
-    </div>
-    <div class="case-title">Blooming Success: Engineering the 'Tulip Sea' for the HK Flower Show</div>
-    <div class="case-punchline">Overcoming logistical challenges to deliver a breathtaking floral spectacle for LCSD.</div>
-    <div class="case-body"><p>For the Hong Kong Flower Show 2025, Firebean partnered with the Leisure and Cultural Services Department (LCSD) to create a vibrant 'Tulip Sea'. The challenge was immense: maintaining floral longevity in an exhibition setting requires precise drainage and upkeep. Firebean's team engineered an innovative, hidden drainage system beneath the aesthetic display, ensuring the tulips remained pristine throughout the event without compromising the visual impact. This project highlights our ability to merge creative vision with rigorous technical execution, delivering spectacular public amenities that stand the test of time.</p>
-<p>Key Outcomes:</p>
-<ul>
-<li>Innovative hidden drainage engineering</li>
-<li>Maintained peak floral aesthetics for the entire show</li>
-<li>Delivered a major public attraction for LCSD</li>
-</ul></div>
-    <a class="case-cta" href="https://firebean.net/profile.html?id=fb2026009" target="_blank">View Full Case Study →</a>
-  </div>
+  <!-- SECTION LABEL 01 -->
+  <tr>
+    <td style="padding:28px 32px 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#BBBBBB;white-space:nowrap;padding-right:12px;font-family:'Helvetica Neue',Arial,sans-serif;">SECTION 01 &mdash; CASE STUDY</td>
+          <td style="border-top:1px solid #E8E8E4;"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-  <div class="divider-red"></div>
+  <!-- CASE STUDY 01 -->
+  <tr>
+    <td style="padding:16px 32px 32px;" bgcolor="#FFFFFF">
+      <!-- Meta -->
+      <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
+        <tr>
+          <td bgcolor="#E8291C" style="background-color:#E8291C;padding:3px 8px;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFFFFF;font-family:'Helvetica Neue',Arial,sans-serif;">GOVERNMENT</td>
+          <td style="padding-left:8px;font-size:11px;color:#AAAAAA;letter-spacing:0.04em;font-family:'Helvetica Neue',Arial,sans-serif;">LCSD 康文署</td>
+        </tr>
+      </table>
+      <!-- Image -->
+      <img src="https://drive.google.com/uc?id=1M9-ezE1vtg__iIIVsx2tTB4DVgGt0cVZ&export=view" alt="鬱金香花海 Hong Kong Flower Show 2025" width="556" style="display:block;width:100%;max-width:556px;height:auto;margin-bottom:18px;object-fit:cover;">
+      <!-- Title -->
+      <h2 style="margin:0 0 8px 0;font-size:20px;font-weight:900;color:#111111;line-height:1.3;letter-spacing:-0.01em;font-family:'Helvetica Neue',Arial,sans-serif;">Blooming Success: Engineering the 'Tulip Sea' for the HK Flower Show</h2>
+      <!-- Punchline -->
+      <div style="margin-bottom:14px;padding-left:12px;border-left:3px solid #E8291C;">
+        <p style="margin:0;font-size:13px;color:#666666;font-style:italic;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Overcoming logistical challenges to deliver a breathtaking floral spectacle for LCSD.</p>
+      </div>
+      <!-- Body -->
+      <div style="margin-bottom:18px;"><p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">For the Hong Kong Flower Show 2025, Firebean partnered with the Leisure and Cultural Services Department (LCSD) to create a vibrant 'Tulip Sea'. The challenge was immense: maintaining floral longevity in an exhibition setting requires precise drainage and upkeep. Firebean's team engineered an innovative, hidden drainage system beneath the aesthetic display, ensuring the tulips remained pristine throughout the event without compromising the visual impact. This project highlights our ability to merge creative vision with rigorous technical execution, delivering spectacular public amenities that stand the test of time.</p>
+<p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Key Outcomes:</p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:10px 0;"><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Innovative hidden drainage engineering</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Maintained peak floral aesthetics for the entire show</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Delivered a major public attraction for LCSD</td>
+            </tr></table></div>
+      <!-- CTA -->
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="border:1.5px solid #111111;padding:10px 20px;">
+            <a href="https://firebean.net/profile.html?id=fb2026009" target="_blank" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#111111;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">VIEW FULL CASE STUDY &rarr;</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-  <!-- SECTION 02 — CASE STUDY: COMMERCIAL -->
-  <div class="section-label">
-    <div class="section-label-text">Section 02 — Case Study</div>
-    <div class="section-label-line"></div>
-  </div>
-  <div class="case-card">
-    <div class="case-meta">
-      <div class="case-tag case-tag-secondary">F&B & HOSPITALITY</div>
-      <div class="case-client">Okinawa Arakaki Market</div>
-    </div>
-    <div class="case-image-wrap">
-      <img class="case-image" src="https://drive.google.com/uc?id=10XLDOssyCSLjqPE_Dwd3aqlDwh3_yOz_&export=view" alt="Shikuwasa Juice Popup Booth">
-    </div>
-    <div class="case-title">Local Charm, Urban Reach: Elevating Regional Products in the City</div>
-    <div class="case-punchline">Okinawa Arakaki Market's pop-up offers a blueprint for promoting local districts.</div>
-    <div class="case-body"><p>To introduce Ogi Village's Shikuwasa juice to urban consumers, Firebean designed a vibrant pop-up booth for Okinawa Arakaki Market. We focused on authentic theme design and visual identity to bridge the gap between a regional specialty and a fast-paced city audience, creating a memorable brand experience.</p>
-<p>This approach is highly relevant for government departments tasked with promoting local districts, heritage sites, or regional initiatives. By employing commercial-grade experiential design, public sector campaigns can transform local features into compelling urban attractions, driving tourism, community pride, and active public participation.</p></div>
-    <a class="case-cta" href="https://firebean.net/profile.html?id=fb2026057" target="_blank">View Full Case Study →</a>
-  </div>
+  <!-- RED DIVIDER -->
+  <tr><td bgcolor="#E8291C" style="background-color:#E8291C;height:2px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- SECTION LABEL 02 -->
+  <tr>
+    <td style="padding:28px 32px 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#BBBBBB;white-space:nowrap;padding-right:12px;font-family:'Helvetica Neue',Arial,sans-serif;">SECTION 02 &mdash; CASE STUDY</td>
+          <td style="border-top:1px solid #E8E8E4;"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- CASE STUDY 02 -->
+  <tr>
+    <td style="padding:16px 32px 32px;" bgcolor="#FFFFFF">
+      <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
+        <tr>
+          <td bgcolor="#111111" style="background-color:#111111;padding:3px 8px;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFFFFF;font-family:'Helvetica Neue',Arial,sans-serif;">F&B & HOSPITALITY</td>
+          <td style="padding-left:8px;font-size:11px;color:#AAAAAA;letter-spacing:0.04em;font-family:'Helvetica Neue',Arial,sans-serif;">Okinawa Arakaki Market</td>
+        </tr>
+      </table>
+      <img src="https://drive.google.com/uc?id=10XLDOssyCSLjqPE_Dwd3aqlDwh3_yOz_&export=view" alt="Shikuwasa Juice Popup Booth" width="556" style="display:block;width:100%;max-width:556px;height:auto;margin-bottom:18px;object-fit:cover;">
+      <h2 style="margin:0 0 8px 0;font-size:20px;font-weight:900;color:#111111;line-height:1.3;letter-spacing:-0.01em;font-family:'Helvetica Neue',Arial,sans-serif;">Local Charm, Urban Reach: Elevating Regional Products in the City</h2>
+      <div style="margin-bottom:14px;padding-left:12px;border-left:3px solid #E8291C;">
+        <p style="margin:0;font-size:13px;color:#666666;font-style:italic;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Okinawa Arakaki Market's pop-up offers a blueprint for promoting local districts.</p>
+      </div>
+      <div style="margin-bottom:18px;"><p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">To introduce Ogi Village's Shikuwasa juice to urban consumers, Firebean designed a vibrant pop-up booth for Okinawa Arakaki Market. We focused on authentic theme design and visual identity to bridge the gap between a regional specialty and a fast-paced city audience, creating a memorable brand experience.</p>
+<p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">This approach is highly relevant for government departments tasked with promoting local districts, heritage sites, or regional initiatives. By employing commercial-grade experiential design, public sector campaigns can transform local features into compelling urban attractions, driving tourism, community pride, and active public participation.</p></div>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="border:1.5px solid #111111;padding:10px 20px;">
+            <a href="https://firebean.net/profile.html?id=fb2026057" target="_blank" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#111111;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">VIEW FULL CASE STUDY &rarr;</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
   <!-- STATS STRIP -->
-  <div class="stats-strip">
-    <div class="stat-item">
-      <span class="stat-number">53<span>+</span></span>
-      <span class="stat-label">Gov't Projects</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number">18<span>+</span></span>
-      <span class="stat-label">Years Experience</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number">360<span>+</span></span>
-      <span class="stat-label">Completed Projects</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number">1.5<span>M+</span></span>
-      <span class="stat-label">Participants Reached</span>
-    </div>
-  </div>
+  <tr>
+    <td bgcolor="#111111" style="background-color:#111111;padding:28px 16px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td align="center" width="25%" style="text-align:center;padding:0 8px;">
+            <span style="font-size:28px;font-weight:900;color:#FFFFFF;display:block;line-height:1;font-family:'Helvetica Neue',Arial,sans-serif;">53<span style="color:#E8291C;">+</span></span>
+            <span style="font-size:10px;color:#888888;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:5px;font-family:'Helvetica Neue',Arial,sans-serif;">Gov&rsquo;t Projects</span>
+          </td>
+          <td align="center" width="25%" style="text-align:center;padding:0 8px;">
+            <span style="font-size:28px;font-weight:900;color:#FFFFFF;display:block;line-height:1;font-family:'Helvetica Neue',Arial,sans-serif;">18<span style="color:#E8291C;">+</span></span>
+            <span style="font-size:10px;color:#888888;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:5px;font-family:'Helvetica Neue',Arial,sans-serif;">Years Experience</span>
+          </td>
+          <td align="center" width="25%" style="text-align:center;padding:0 8px;">
+            <span style="font-size:28px;font-weight:900;color:#FFFFFF;display:block;line-height:1;font-family:'Helvetica Neue',Arial,sans-serif;">360<span style="color:#E8291C;">+</span></span>
+            <span style="font-size:10px;color:#888888;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:5px;font-family:'Helvetica Neue',Arial,sans-serif;">Completed Projects</span>
+          </td>
+          <td align="center" width="25%" style="text-align:center;padding:0 8px;">
+            <span style="font-size:28px;font-weight:900;color:#FFFFFF;display:block;line-height:1;font-family:'Helvetica Neue',Arial,sans-serif;">1.5<span style="color:#E8291C;">M+</span></span>
+            <span style="font-size:10px;color:#888888;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:5px;font-family:'Helvetica Neue',Arial,sans-serif;">Participants Reached</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-  <!-- SECTION 03 — INDUSTRY INSIGHT -->
-  <div class="insight-section">
-    <div class="insight-eyebrow">Section 03 — Industry Insight</div>
-    <div class="insight-topic-tag">Experiential Marketing for Public Engagement</div>
-    <img class="insight-image" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/slXzEOazXNqhEqSS.jpg" alt="Experiential Marketing for Public Engagement">
-    <div class="insight-title">Engage, Recall, Act: Experiential Marketing's Edge</div>
-    <div class="insight-punchline">Live experiences drive deeper connections and superior ROI for public awareness.</div>
-    <div class="insight-body"><p>Experiential marketing campaigns generate <strong>2x higher brand recall</strong> than traditional advertising [1]. This trend highlights a significant shift in how audiences, including Hong Kong citizens, engage with public awareness initiatives. Unlike passive traditional ads, experiential campaigns immerse participants, fostering emotional connections and active participation. This leads to more memorable experiences, higher engagement, and a greater likelihood of message retention, offering superior value for public sector communication.</p>
-<ul>
-<li>Enhanced Public Trust**: Direct, interactive experiences build stronger trust than one-way messaging.</li>
-<li>Increased Message Retention**: Memorable events ensure key public messages resonate longer with citizens.</li>
-<li>Cost-Effective Engagement**: Higher recall and word-of-mouth amplification reduce the need for repeated, costly traditional ad buys.</li>
-<li>Data-Driven Insights**: Real-time interaction provides valuable feedback for refining future public campaigns.</li>
-</ul>
-<p>Source: [1] Kande Photo Booths, "Experiential Marketing Statistics 2026"</p></div>
-  </div>
+  <!-- SECTION 03 — INSIGHT -->
+  <tr>
+    <td bgcolor="#FAFAFA" style="background-color:#FAFAFA;padding:32px;border-top:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;">
+      <p style="margin:0 0 6px 0;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#BBBBBB;font-family:'Helvetica Neue',Arial,sans-serif;">SECTION 03 &mdash; INDUSTRY INSIGHT</p>
+      <div style="display:inline-block;background-color:#E8291C;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;margin-bottom:14px;font-family:'Helvetica Neue',Arial,sans-serif;">Experiential Marketing for Public Engagement</div>
+      <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/slXzEOazXNqhEqSS.jpg" alt="Experiential Marketing for Public Engagement" width="556" style="display:block;width:100%;max-width:556px;height:auto;margin-bottom:18px;object-fit:cover;">
+      <h2 style="margin:0 0 8px 0;font-size:20px;font-weight:900;color:#111111;line-height:1.3;font-family:'Helvetica Neue',Arial,sans-serif;">Engage, Recall, Act: Experiential Marketing's Edge</h2>
+      <div style="margin-bottom:16px;padding-left:12px;border-left:3px solid #E8291C;">
+        <p style="margin:0;font-size:13px;color:#666666;font-style:italic;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Live experiences drive deeper connections and superior ROI for public awareness.</p>
+      </div>
+      <div><p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Experiential marketing campaigns generate <strong>2x higher brand recall</strong> than traditional advertising [1]. This trend highlights a significant shift in how audiences, including Hong Kong citizens, engage with public awareness initiatives. Unlike passive traditional ads, experiential campaigns immerse participants, fostering emotional connections and active participation. This leads to more memorable experiences, higher engagement, and a greater likelihood of message retention, offering superior value for public sector communication.</p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:10px 0;"><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Enhanced Public Trust**: Direct, interactive experiences build stronger trust than one-way messaging.</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Increased Message Retention**: Memorable events ensure key public messages resonate longer with citizens.</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Cost-Effective Engagement**: Higher recall and word-of-mouth amplification reduce the need for repeated, costly traditional ad buys.</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Data-Driven Insights**: Real-time interaction provides valuable feedback for refining future public campaigns.</td>
+            </tr></table>
+<p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Source: [1] Kande Photo Booths, "Experiential Marketing Statistics 2026"</p></div>
+    </td>
+  </tr>
 
   <!-- SECTION 04 — WHY FIREBEAN -->
-  <div class="agency-cta-section">
-    <div class="agency-cta-eyebrow">Section 04 — Why Firebean</div>
-    <img class="agency-cta-image" src="There is a persistent misconception in public sector procurement: that commercial-grade design quality is incompatible with government budget constraints. Firebean was built to disprove exactly that.
+  <tr>
+    <td bgcolor="#FFFFFF" style="background-color:#FFFFFF;padding:36px 32px;border-top:4px solid #E8291C;">
+      <p style="margin:0 0 8px 0;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#E8291C;font-family:'Helvetica Neue',Arial,sans-serif;">SECTION 04 &mdash; WHY FIREBEAN</p>
+      <img src="There is a persistent misconception in public sector procurement: that commercial-grade design quality is incompatible with government budget constraints. Firebean was built to disprove exactly that.
 
 Our dual expertise — serving lifestyle brands like K-palette, Yves Rocher, and OGAWA alongside government bureaux — means we apply the same visual standards, material quality, and experiential thinking to every project, regardless of sector.
 
 The result: public campaigns that stop people in their tracks, generate organic social sharing, and deliver measurable footfall — all within your approved budget envelope and full tender compliance.
 
-Ask us how we do it: contact@firebean.net" alt="Firebean Agency">
-    <div class="agency-cta-title">Your Strategic Partner for High-Impact Civic Campaigns</div>
-    <div class="agency-cta-punchline">Why Should Government Campaigns Look Less Impressive Than a Shopping Mall?</div>
-    <div class="agency-cta-body"><p>Your citizens deserve the same visual quality as any premium brand activation. We make it happen within tender budget.</p></div>
-    <div class="contact-box">
-      <div class="contact-box-label">Ready to talk?</div>
-      <a href="mailto:contact@firebean.net">contact@firebean.net →</a>
-    </div>
-    <a class="agency-cta-btn" href="mailto:contact@firebean.net" target="_blank">Get in Touch →</a>
-  </div>
+Ask us how we do it: contact@firebean.net" alt="Firebean Agency" width="556" style="display:block;width:100%;max-width:556px;height:auto;margin-bottom:22px;object-fit:cover;">
+      <h2 style="margin:0 0 10px 0;font-size:22px;font-weight:900;color:#111111;line-height:1.25;font-family:'Helvetica Neue',Arial,sans-serif;">Your Strategic Partner for High-Impact Civic Campaigns</h2>
+      <div style="margin-bottom:16px;padding-left:12px;border-left:3px solid #E8291C;">
+        <p style="margin:0;font-size:13px;color:#666666;font-style:italic;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Why Should Government Campaigns Look Less Impressive Than a Shopping Mall?</p>
+      </div>
+      <div style="margin-bottom:20px;"><p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Your citizens deserve the same visual quality as any premium brand activation. We make it happen within tender budget.</p></div>
+      <!-- Contact box -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;background-color:#F8F8F6;border-left:3px solid #E8291C;">
+        <tr>
+          <td style="padding:16px;">
+            <p style="margin:0 0 6px 0;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#AAAAAA;font-family:'Helvetica Neue',Arial,sans-serif;">READY TO TALK?</p>
+            <a href="mailto:contact@firebean.net" style="font-size:13px;color:#E8291C;font-weight:700;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">contact@firebean.net &rarr;</a>
+          </td>
+        </tr>
+      </table>
+      <!-- CTA button -->
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td bgcolor="#E8291C" style="background-color:#E8291C;padding:13px 28px;">
+            <a href="https://firebean.net" target="_blank" style="font-size:12px;font-weight:900;letter-spacing:0.15em;text-transform:uppercase;color:#FFFFFF;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">Explore Our Work &rarr;</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
   <!-- FOOTER -->
-  <div class="email-footer">
-    <div class="footer-logo">
-      <img class="footer-logo-img" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png" alt="Firebean Logo">
-      <div class="footer-logo-text">firebean</div>
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-links">
-      <a href="https://firebean.net" target="_blank">Website</a>
-      <a href="https://firebean.net/work.html" target="_blank">Our Work</a>
-      <a href="mailto:hello@firebean.net">Contact Us</a>
-      <a href="https://firebean.net" target="_blank">公關市場解碼</a>
-    </div>
-    <div class="footer-address">
-      Firebean Limited &nbsp;·&nbsp; Unit A, 23/F, Morrison Plaza, 5-9A Morrison Hill Rd, Wan Chai, Hong Kong<br>
-      Tel: +852 3622 2784 &nbsp;·&nbsp; hello@firebean.net
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-legal">
-      You are receiving this newsletter because you subscribed to <strong style="color:#666666;">公關市場解碼</strong> by Firebean.<br>
-      To ensure delivery, please add <a href="mailto:hello@firebean.net">hello@firebean.net</a> to your address book.<br><br>
-      © 2026 Firebean Limited. All rights reserved.
-    </div>
-    <div class="footer-unsubscribe">
-      <a href="#">Unsubscribe</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a>
-    </div>
-  </div>
+  <tr>
+    <td bgcolor="#F5F5F3" style="background-color:#F5F5F3;padding:28px 32px 24px;border-top:3px solid #E8291C;">
+      <!-- Logo -->
+      <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:18px;">
+        <tr>
+          <td valign="middle" style="padding-right:8px;">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png" alt="Firebean" width="28" height="28" style="display:block;width:28px;height:28px;object-fit:contain;">
+          </td>
+          <td valign="middle">
+            <span style="font-size:14px;font-weight:300;color:#111111;letter-spacing:0.25em;font-family:'Helvetica Neue',Arial,sans-serif;">FIREBEAN</span>
+          </td>
+        </tr>
+      </table>
+      <!-- Divider -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:16px 0;">
+        <tr><td style="border-top:1px solid #E0E0E0;height:1px;font-size:0;line-height:0;">&nbsp;</td></tr>
+      </table>
+      <!-- Links -->
+      <p style="margin:0 0 14px 0;font-size:11px;color:#666666;font-family:'Helvetica Neue',Arial,sans-serif;">
+        <a href="https://firebean.net" target="_blank" style="color:#666666;text-decoration:none;">Website</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="https://firebean.net/work.html" target="_blank" style="color:#666666;text-decoration:none;">Our Work</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="mailto:hello@firebean.net" style="color:#666666;text-decoration:none;">Contact Us</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="https://firebean.net" target="_blank" style="color:#666666;text-decoration:none;">&#20844;&#38364;&#24066;&#22580;&#35299;&#30908;</a>
+      </p>
+      <!-- Address -->
+      <p style="margin:0 0 14px 0;font-size:11px;color:#888888;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">
+        Firebean Limited &nbsp;&middot;&nbsp; Unit A, 23/F, Morrison Plaza, 5-9A Morrison Hill Rd, Wan Chai, Hong Kong<br>
+        Tel: +852 3622 2784 &nbsp;&middot;&nbsp; hello@firebean.net
+      </p>
+      <!-- Divider -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:16px 0;">
+        <tr><td style="border-top:1px solid #E0E0E0;height:1px;font-size:0;line-height:0;">&nbsp;</td></tr>
+      </table>
+      <!-- Legal -->
+      <p style="margin:0 0 10px 0;font-size:10px;color:#AAAAAA;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">
+        You are receiving this newsletter because you subscribed to <strong style="color:#666666;">&#20844;&#38364;&#24066;&#22580;&#35299;&#30908;</strong> by Firebean.<br>
+        To ensure delivery, please add <a href="mailto:hello@firebean.net" style="color:#888888;">hello@firebean.net</a> to your address book.<br><br>
+        &copy; 2026 Firebean Limited. All rights reserved.
+      </p>
+      <p style="margin:0;font-size:10px;color:#AAAAAA;font-family:'Helvetica Neue',Arial,sans-serif;">
+        <a href="#" style="color:#888888;text-decoration:underline;">Unsubscribe</a>
+        &nbsp;|&nbsp;
+        <a href="#" style="color:#888888;text-decoration:underline;">Privacy Policy</a>
+        &nbsp;|&nbsp;
+        <a href="#" style="color:#888888;text-decoration:underline;">Terms of Service</a>
+      </p>
+    </td>
+  </tr>
 
-</div>
-</div>
+</table>
+<!-- END EMAIL CONTAINER -->
+
+</td></tr>
+</table>
+<!-- END OUTER WRAPPER -->
+
 </body>
 </html>

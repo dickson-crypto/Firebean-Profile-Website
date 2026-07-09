@@ -4,235 +4,249 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Firebean EDM — Issue 020 | Firebean Insights: HK Smart Retail & Gov't Promotions & Public Engagement Strategies</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: #EBEBEB; font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-    .email-wrapper { width: 100%; background-color: #EBEBEB; padding: 32px 16px; }
-    .email-container { max-width: 620px; margin: 0 auto; background-color: #FFFFFF; border: 1px solid #E0E0E0; }
-    .pre-header { background-color: #F5F5F3; padding: 9px 24px; text-align: center; border-bottom: 1px solid #E8E8E4; }
-    .pre-header a { color: #888888; font-size: 11px; letter-spacing: 0.08em; text-decoration: none; }
-    .email-header { background-color: #FFFFFF; padding: 22px 32px 18px; border-bottom: 3px solid #E8291C; }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; }
-    .logo-block { display: flex; align-items: center; gap: 10px; }
-    .logo-icon-img { width: 36px; height: 36px; object-fit: contain; }
-    .logo-text { font-size: 18px; font-weight: 300; color: #111111; letter-spacing: 0.25em; text-transform: lowercase; font-variant: small-caps; }
-    .header-issue { font-size: 11px; color: #999999; letter-spacing: 0.08em; text-align: right; line-height: 1.5; }
-    .header-issue strong { color: #E8291C; display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; }
-    .hero-section { position: relative; background-color: #F0F0F0; overflow: hidden; }
-    .hero-image { width: 100%; display: block; height: 340px; object-fit: cover; }
-    .hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 65%); padding: 40px 32px 28px; }
-    .hero-tag { display: inline-block; background-color: #E8291C; color: #FFFFFF; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 10px; margin-bottom: 12px; }
-    .hero-title { font-size: 26px; font-weight: 900; color: #FFFFFF; line-height: 1.25; letter-spacing: -0.01em; max-width: 480px; }
-    .issue-intro { background-color: #FAFAFA; padding: 20px 32px 24px; border-bottom: 1px solid #EEEEEE; }
-    .issue-intro p { font-size: 13px; color: #555555; line-height: 1.75; }
-    .section-label { padding: 28px 32px 0; display: flex; align-items: center; gap: 12px; }
-    .section-label-line { flex: 1; height: 1px; background-color: #E8E8E4; }
-    .section-label-text { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #BBBBBB; white-space: nowrap; }
-    .case-card { padding: 20px 32px 32px; border-bottom: 1px solid #F0F0F0; background-color: #FFFFFF; }
-    .case-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
-    .case-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background-color: #E8291C; padding: 3px 8px; }
-    .case-tag-secondary { background-color: #111111; }
-    .case-client { font-size: 11px; color: #AAAAAA; letter-spacing: 0.04em; }
-    .case-image-wrap { width: 100%; overflow: hidden; margin-bottom: 18px; background-color: #F0F0F0; }
-    .case-image { width: 100%; display: block; height: 240px; object-fit: cover; }
-    .case-title { font-size: 20px; font-weight: 900; color: #111111; line-height: 1.3; margin-bottom: 8px; letter-spacing: -0.01em; }
-    .case-punchline { font-size: 13px; color: #666666; font-style: italic; line-height: 1.6; margin-bottom: 14px; padding-left: 12px; border-left: 3px solid #E8291C; }
-    .case-body { font-size: 13px; color: #444444; line-height: 1.75; margin-bottom: 18px; }
-    .case-body p { margin-bottom: 10px; }
-    .case-body ul { list-style: none; padding: 0; margin: 10px 0; }
-    .case-body li { font-size: 12px; color: #444444; line-height: 1.6; padding-left: 16px; position: relative; margin-bottom: 4px; }
-    .case-body li::before { content: '→'; position: absolute; left: 0; color: #E8291C; font-weight: 700; }
-    .case-outcomes { background-color: #F8F8F6; border-left: 3px solid #E8291C; padding: 14px 16px; margin-bottom: 18px; }
-    .case-outcomes-title { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #AAAAAA; margin-bottom: 8px; }
-    .case-cta { display: inline-block; border: 1.5px solid #111111; color: #111111; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 20px; text-decoration: none; }
-    .divider-red { background-color: #E8291C; height: 2px; }
-    .stats-strip { background-color: #111111; padding: 28px 32px; display: flex; justify-content: space-around; }
-    .stat-item { text-align: center; }
-    .stat-number { font-size: 28px; font-weight: 900; color: #FFFFFF; line-height: 1; display: block; }
-    .stat-number span { color: #E8291C; }
-    .stat-label { font-size: 10px; color: #888888; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 5px; }
-    .insight-section { background-color: #FAFAFA; padding: 32px; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #EEEEEE; }
-    .insight-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #BBBBBB; margin-bottom: 6px; }
-    .insight-topic-tag { display: inline-block; background-color: #E8291C; color: #FFFFFF; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; margin-bottom: 14px; }
-    .insight-image { width: 100%; display: block; height: 200px; object-fit: cover; margin-bottom: 18px; }
-    .insight-title { font-size: 20px; font-weight: 900; color: #111111; line-height: 1.3; margin-bottom: 8px; }
-    .insight-punchline { font-size: 13px; color: #666666; font-style: italic; line-height: 1.6; margin-bottom: 16px; padding-left: 12px; border-left: 3px solid #E8291C; }
-    .insight-body { font-size: 13px; color: #444444; line-height: 1.75; }
-    .insight-body p { margin-bottom: 10px; }
-    .insight-body ul { list-style: none; padding: 0; margin: 10px 0; }
-    .insight-body li { font-size: 12px; color: #444444; line-height: 1.6; padding-left: 16px; position: relative; margin-bottom: 6px; }
-    .insight-body li::before { content: '▸'; position: absolute; left: 0; color: #E8291C; }
-    .insight-source { font-size: 11px; color: #AAAAAA; margin-top: 12px; font-style: italic; }
-    .agency-cta-section { background-color: #FFFFFF; padding: 36px 32px; border-top: 4px solid #E8291C; }
-    .agency-cta-image { width: 100%; display: block; height: 200px; object-fit: cover; margin-bottom: 22px; }
-    .agency-cta-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E8291C; margin-bottom: 8px; }
-    .agency-cta-title { font-size: 22px; font-weight: 900; color: #111111; line-height: 1.25; margin-bottom: 10px; }
-    .agency-cta-punchline { font-size: 13px; color: #666666; font-style: italic; line-height: 1.6; margin-bottom: 16px; padding-left: 12px; border-left: 3px solid #E8291C; }
-    .agency-cta-body { font-size: 13px; color: #444444; line-height: 1.75; margin-bottom: 20px; }
-    .agency-cta-body p { margin-bottom: 10px; }
-    .agency-cta-body ul { list-style: none; padding: 0; margin: 10px 0; }
-    .agency-cta-body li { font-size: 12px; color: #444444; line-height: 1.6; padding-left: 16px; position: relative; margin-bottom: 6px; }
-    .agency-cta-body li::before { content: '→'; position: absolute; left: 0; color: #E8291C; }
-    .agency-cta-btn { display: inline-block; background-color: #E8291C; color: #FFFFFF; font-size: 12px; font-weight: 900; letter-spacing: 0.15em; text-transform: uppercase; padding: 13px 28px; text-decoration: none; margin-top: 20px; }
-    .contact-box { margin-top: 20px; padding: 16px; background: #F8F8F6; border-left: 3px solid #E8291C; }
-    .contact-box-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #AAAAAA; margin-bottom: 6px; }
-    .contact-box a { font-size: 13px; color: #E8291C; font-weight: 700; text-decoration: none; }
-    .email-footer { background-color: #F5F5F3; padding: 28px 32px 24px; border-top: 3px solid #E8291C; }
-    .footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
-    .footer-logo-img { width: 28px; height: 28px; object-fit: contain; }
-    .footer-logo-text { font-size: 14px; font-weight: 300; color: #111111; letter-spacing: 0.25em; text-transform: lowercase; font-variant: small-caps; }
-    .footer-divider { height: 1px; background-color: #E0E0E0; margin: 16px 0; }
-    .footer-links { display: flex; gap: 20px; margin-bottom: 14px; flex-wrap: wrap; }
-    .footer-links a { font-size: 11px; color: #666666; text-decoration: none; letter-spacing: 0.05em; }
-    .footer-address { font-size: 11px; color: #888888; line-height: 1.6; margin-bottom: 14px; }
-    .footer-legal { font-size: 10px; color: #AAAAAA; line-height: 1.6; }
-    .footer-legal a { color: #888888; text-decoration: underline; }
-    .footer-unsubscribe { font-size: 10px; color: #AAAAAA; margin-top: 10px; }
-    .footer-unsubscribe a { color: #888888; text-decoration: underline; }
-    @media (max-width: 640px) {
-      .email-wrapper { padding: 0; }
-      .email-container { max-width: 100%; border: none; }
-      .hero-title { font-size: 20px; }
-      .case-title, .insight-title, .agency-cta-title { font-size: 17px; }
-      .stats-strip { flex-direction: column; gap: 16px; }
-      .header-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
-    }
-  </style>
+  <title>Firebean EDM &mdash; Issue 020 | Firebean Insights: HK Smart Retail & Gov't Promotions & Public Engagement Strategies</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
 </head>
-<body>
-<div class="email-wrapper">
-<div class="email-container">
+<body style="margin:0;padding:0;background-color:#EBEBEB;font-family:'Helvetica Neue',Arial,sans-serif;">
+
+<!-- OUTER WRAPPER -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#EBEBEB" style="background-color:#EBEBEB;">
+<tr><td align="center" style="padding:32px 16px;">
+
+<!-- EMAIL CONTAINER -->
+<table width="620" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="max-width:620px;width:100%;background-color:#FFFFFF;border:1px solid #E0E0E0;">
 
   <!-- PRE-HEADER -->
-  <div class="pre-header">
-    <a href="https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_020.html" target="_blank">View this email in your browser &nbsp;|&nbsp; 在瀏覽器中查看</a>
-  </div>
+  <tr>
+    <td bgcolor="#F5F5F3" style="background-color:#F5F5F3;padding:9px 24px;text-align:center;border-bottom:1px solid #E8E8E4;" align="center">
+      <a href="https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_020.html" target="_blank" style="color:#888888;font-size:11px;letter-spacing:0.08em;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">View this email in your browser &nbsp;|&nbsp; &#22312;&#28993;&#35272;&#22120;&#20013;&#26597;&#30475;</a>
+    </td>
+  </tr>
 
-  <!-- HEADER -->
-  <div class="email-header">
-    <div class="header-inner">
-      <div class="logo-block">
-        <img class="logo-icon-img" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png" alt="Firebean Logo">
-        <div class="logo-text">firebean</div>
-      </div>
-      <div class="header-issue">
-        <strong>公關市場解碼</strong>
-        Issue 020 &nbsp;·&nbsp; 2026-11-24
-      </div>
-    </div>
-  </div>
+  <!-- HEADER: LOGO + ISSUE INFO -->
+  <tr>
+    <td bgcolor="#FFFFFF" style="background-color:#FFFFFF;padding:22px 32px 18px;border-bottom:3px solid #E8291C;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td valign="middle" style="vertical-align:middle;">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td valign="middle" style="padding-right:10px;">
+                  <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png" alt="Firebean" width="36" height="36" style="display:block;width:36px;height:36px;object-fit:contain;">
+                </td>
+                <td valign="middle">
+                  <span style="font-size:18px;font-weight:300;color:#111111;letter-spacing:0.25em;font-family:'Helvetica Neue',Arial,sans-serif;">FIREBEAN</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td align="right" valign="middle" style="text-align:right;vertical-align:middle;">
+            <span style="color:#E8291C;display:block;font-size:12px;font-weight:700;letter-spacing:0.12em;font-family:'Helvetica Neue',Arial,sans-serif;">&#20844;&#38364;&#24066;&#22580;&#35299;&#30908;</span>
+            <span style="font-size:11px;color:#999999;letter-spacing:0.08em;font-family:'Helvetica Neue',Arial,sans-serif;">Issue 020 &nbsp;&middot;&nbsp; 2026-11-24</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-  <!-- HERO -->
-  <div class="hero-section">
-    <img class="hero-image" src="https://drive.google.com/uc?id=1pAH-28dGqZJgFeGIdDpxz-j86X118GLM&export=view" alt="「切勿亂拆主力牆」宣傳片（API）">
-    <div class="hero-overlay">
-      <div class="hero-tag">Government &amp; Public Sector</div>
-      <div class="hero-title">Firebean Insights: HK Smart Retail & Gov't Promotions & Public Engagement Strategies</div>
-    </div>
-  </div>
+  <!-- HERO IMAGE -->
+  <tr>
+    <td style="padding:0;margin:0;line-height:0;font-size:0;" bgcolor="#111111">
+      <div style="position:relative;">
+        <img src="https://drive.google.com/uc?id=1pAH-28dGqZJgFeGIdDpxz-j86X118GLM&export=view" alt="「切勿亂拆主力牆」宣傳片（API）" width="620" style="display:block;width:100%;max-width:620px;height:auto;min-height:300px;object-fit:cover;">
+        <div style="background-color:rgba(0,0,0,0.55);padding:28px 32px 24px;">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td>
+                <div style="display:inline-block;background-color:#E8291C;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px;margin-bottom:12px;font-family:'Helvetica Neue',Arial,sans-serif;">GOVERNMENT &amp; PUBLIC SECTOR</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="font-size:24px;font-weight:900;color:#FFFFFF;line-height:1.25;letter-spacing:-0.01em;max-width:480px;font-family:'Helvetica Neue',Arial,sans-serif;">Firebean Insights: HK Smart Retail & Gov't Promotions & Public Engagement Strategies</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </td>
+  </tr>
 
   <!-- ISSUE INTRO -->
-  <div class="issue-intro">
-    <p>Welcome to Issue 020 of <strong style="color:#111111;">公關市場解碼</strong> — Firebean's insider briefing on what's actually working in Hong Kong's PR and experiential marketing landscape. This issue: two campaigns that turned passive audiences into active advocates, a market trend you can't afford to ignore, and a direct case for why Firebean is your next strategic partner.</p>
-  </div>
+  <tr>
+    <td bgcolor="#FAFAFA" style="background-color:#FAFAFA;padding:20px 32px 24px;border-bottom:1px solid #EEEEEE;">
+      <p style="margin:0;font-size:13px;color:#555555;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Welcome to Issue 020 of <strong style="color:#111111;">&#20844;&#38364;&#24066;&#22580;&#35299;&#30908;</strong> &mdash; Firebean&rsquo;s insider briefing on what&rsquo;s actually working in Hong Kong&rsquo;s PR and experiential marketing landscape. This issue: two campaigns that turned passive audiences into active advocates, a market trend you can&rsquo;t afford to ignore, and a direct case for why Firebean is your next strategic partner.</p>
+    </td>
+  </tr>
 
-  <!-- SECTION 01 — CASE STUDY: GOVERNMENT -->
-  <div class="section-label">
-    <div class="section-label-text">Section 01 — Case Study</div>
-    <div class="section-label-line"></div>
-  </div>
-  <div class="case-card">
-    <div class="case-meta">
-      <div class="case-tag">Government</div>
-      <div class="case-client">屋宇署</div>
-    </div>
-    <div class="case-image-wrap">
-      <img class="case-image" src="https://drive.google.com/uc?id=1pAH-28dGqZJgFeGIdDpxz-j86X118GLM&export=view" alt="「切勿亂拆主力牆」宣傳片（API）">
-    </div>
-    <div class="case-title">Public Engagement Redefined: 屋宇署</div>
-    <div class="case-punchline">How Firebean transformed 「切勿亂拆主力牆」宣傳片（API） into a highly effective civic campaign.</div>
-    <div class="case-body"><p>When 屋宇署 needed to elevate their public outreach for '「切勿亂拆主力牆」宣傳片（API）', they required a solution that moved beyond traditional information dissemination. Firebean engineered a comprehensive campaign that focused on experiential engagement, ensuring the core civic message resonated deeply with the target audience.</p>
-<p>By leveraging strategic event planning, targeted visual identity, and seamless on-site operation, we transformed a standard government initiative into an interactive public experience. This approach not only maximized foot traffic and participation but also provided measurable engagement metrics, demonstrating the power of creative execution in public sector communications.</p>
-<p>Key Outcomes:</p>
-<ul>
-<li>Enhanced public awareness and participation</li>
-<li>Seamless execution of complex event logistics</li>
-<li>Clear communication of key government objectives</li>
-</ul></div>
-    <a class="case-cta" href="https://firebean.net/profile.html?id=fb2026050" target="_blank">View Full Case Study →</a>
-  </div>
+  <!-- SECTION LABEL 01 -->
+  <tr>
+    <td style="padding:28px 32px 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#BBBBBB;white-space:nowrap;padding-right:12px;font-family:'Helvetica Neue',Arial,sans-serif;">SECTION 01 &mdash; CASE STUDY</td>
+          <td style="border-top:1px solid #E8E8E4;"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-  <div class="divider-red"></div>
+  <!-- CASE STUDY 01 -->
+  <tr>
+    <td style="padding:16px 32px 32px;" bgcolor="#FFFFFF">
+      <!-- Meta -->
+      <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
+        <tr>
+          <td bgcolor="#E8291C" style="background-color:#E8291C;padding:3px 8px;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFFFFF;font-family:'Helvetica Neue',Arial,sans-serif;">GOVERNMENT</td>
+          <td style="padding-left:8px;font-size:11px;color:#AAAAAA;letter-spacing:0.04em;font-family:'Helvetica Neue',Arial,sans-serif;">屋宇署</td>
+        </tr>
+      </table>
+      <!-- Image -->
+      <img src="https://drive.google.com/uc?id=1pAH-28dGqZJgFeGIdDpxz-j86X118GLM&export=view" alt="「切勿亂拆主力牆」宣傳片（API）" width="556" style="display:block;width:100%;max-width:556px;height:auto;margin-bottom:18px;object-fit:cover;">
+      <!-- Title -->
+      <h2 style="margin:0 0 8px 0;font-size:20px;font-weight:900;color:#111111;line-height:1.3;letter-spacing:-0.01em;font-family:'Helvetica Neue',Arial,sans-serif;">Public Engagement Redefined: 屋宇署</h2>
+      <!-- Punchline -->
+      <div style="margin-bottom:14px;padding-left:12px;border-left:3px solid #E8291C;">
+        <p style="margin:0;font-size:13px;color:#666666;font-style:italic;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">How Firebean transformed 「切勿亂拆主力牆」宣傳片（API） into a highly effective civic campaign.</p>
+      </div>
+      <!-- Body -->
+      <div style="margin-bottom:18px;"><p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">When 屋宇署 needed to elevate their public outreach for '「切勿亂拆主力牆」宣傳片（API）', they required a solution that moved beyond traditional information dissemination. Firebean engineered a comprehensive campaign that focused on experiential engagement, ensuring the core civic message resonated deeply with the target audience.</p>
+<p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">By leveraging strategic event planning, targeted visual identity, and seamless on-site operation, we transformed a standard government initiative into an interactive public experience. This approach not only maximized foot traffic and participation but also provided measurable engagement metrics, demonstrating the power of creative execution in public sector communications.</p>
+<p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Key Outcomes:</p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:10px 0;"><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Enhanced public awareness and participation</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Seamless execution of complex event logistics</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Clear communication of key government objectives</td>
+            </tr></table></div>
+      <!-- CTA -->
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="border:1.5px solid #111111;padding:10px 20px;">
+            <a href="https://firebean.net/profile.html?id=fb2026050" target="_blank" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#111111;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">VIEW FULL CASE STUDY &rarr;</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-  <!-- SECTION 02 — CASE STUDY: COMMERCIAL -->
-  <div class="section-label">
-    <div class="section-label-text">Section 02 — Case Study</div>
-    <div class="section-label-line"></div>
-  </div>
-  <div class="case-card">
-    <div class="case-meta">
-      <div class="case-tag case-tag-secondary">F&B & HOSPITALITY</div>
-      <div class="case-client">三代目</div>
-    </div>
-    <div class="case-image-wrap">
-      <img class="case-image" src="https://drive.google.com/uc?id=1WmzXlsM2yUnsgwTfm0nsGmE9RTGBgJQE&export=view" alt="北角全新日式拉麵居酒屋">
-    </div>
-    <div class="case-title">Commercial Innovation for Civic Impact: Lessons from 三代目</div>
-    <div class="case-punchline">Applying commercial experiential marketing strategies to public sector campaigns.</div>
-    <div class="case-body"><p>How do top commercial brands capture audience attention in a crowded market? For 三代目's '北角全新日式拉麵居酒屋', Firebean utilized advanced experiential design and targeted engagement mechanics to create a standout brand activation. We focused on creating an immersive environment that encouraged active participation and social sharing.</p>
-<p>This commercial methodology is highly transferable to government campaigns. Whether promoting public health, safety, or civic duties, applying these commercial-grade engagement strategies transforms passive public announcements into interactive community events. By adopting these techniques, government departments can significantly increase message retention, public goodwill, and overall campaign effectiveness.</p>
-<p>Government Takeaway:</p>
-<ul>
-<li>Commercial experiential tactics increase civic message retention</li>
-<li>Interactive formats drive higher public participation rates</li>
-<li>Strategic design elevates the perceived value of government initiatives</li>
-</ul></div>
-    <a class="case-cta" href="https://firebean.net/profile.html?id=fb2026060" target="_blank">View Full Case Study →</a>
-  </div>
+  <!-- RED DIVIDER -->
+  <tr><td bgcolor="#E8291C" style="background-color:#E8291C;height:2px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+  <!-- SECTION LABEL 02 -->
+  <tr>
+    <td style="padding:28px 32px 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#BBBBBB;white-space:nowrap;padding-right:12px;font-family:'Helvetica Neue',Arial,sans-serif;">SECTION 02 &mdash; CASE STUDY</td>
+          <td style="border-top:1px solid #E8E8E4;"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- CASE STUDY 02 -->
+  <tr>
+    <td style="padding:16px 32px 32px;" bgcolor="#FFFFFF">
+      <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
+        <tr>
+          <td bgcolor="#111111" style="background-color:#111111;padding:3px 8px;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FFFFFF;font-family:'Helvetica Neue',Arial,sans-serif;">F&B & HOSPITALITY</td>
+          <td style="padding-left:8px;font-size:11px;color:#AAAAAA;letter-spacing:0.04em;font-family:'Helvetica Neue',Arial,sans-serif;">三代目</td>
+        </tr>
+      </table>
+      <img src="https://drive.google.com/uc?id=1WmzXlsM2yUnsgwTfm0nsGmE9RTGBgJQE&export=view" alt="北角全新日式拉麵居酒屋" width="556" style="display:block;width:100%;max-width:556px;height:auto;margin-bottom:18px;object-fit:cover;">
+      <h2 style="margin:0 0 8px 0;font-size:20px;font-weight:900;color:#111111;line-height:1.3;letter-spacing:-0.01em;font-family:'Helvetica Neue',Arial,sans-serif;">Commercial Innovation for Civic Impact: Lessons from 三代目</h2>
+      <div style="margin-bottom:14px;padding-left:12px;border-left:3px solid #E8291C;">
+        <p style="margin:0;font-size:13px;color:#666666;font-style:italic;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Applying commercial experiential marketing strategies to public sector campaigns.</p>
+      </div>
+      <div style="margin-bottom:18px;"><p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">How do top commercial brands capture audience attention in a crowded market? For 三代目's '北角全新日式拉麵居酒屋', Firebean utilized advanced experiential design and targeted engagement mechanics to create a standout brand activation. We focused on creating an immersive environment that encouraged active participation and social sharing.</p>
+<p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">This commercial methodology is highly transferable to government campaigns. Whether promoting public health, safety, or civic duties, applying these commercial-grade engagement strategies transforms passive public announcements into interactive community events. By adopting these techniques, government departments can significantly increase message retention, public goodwill, and overall campaign effectiveness.</p>
+<p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Government Takeaway:</p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:10px 0;"><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Commercial experiential tactics increase civic message retention</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Interactive formats drive higher public participation rates</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Strategic design elevates the perceived value of government initiatives</td>
+            </tr></table></div>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="border:1.5px solid #111111;padding:10px 20px;">
+            <a href="https://firebean.net/profile.html?id=fb2026060" target="_blank" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#111111;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">VIEW FULL CASE STUDY &rarr;</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
   <!-- STATS STRIP -->
-  <div class="stats-strip">
-    <div class="stat-item">
-      <span class="stat-number">53<span>+</span></span>
-      <span class="stat-label">Gov't Projects</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number">18<span>+</span></span>
-      <span class="stat-label">Years Experience</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number">360<span>+</span></span>
-      <span class="stat-label">Completed Projects</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number">1.5<span>M+</span></span>
-      <span class="stat-label">Participants Reached</span>
-    </div>
-  </div>
+  <tr>
+    <td bgcolor="#111111" style="background-color:#111111;padding:28px 16px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td align="center" width="25%" style="text-align:center;padding:0 8px;">
+            <span style="font-size:28px;font-weight:900;color:#FFFFFF;display:block;line-height:1;font-family:'Helvetica Neue',Arial,sans-serif;">53<span style="color:#E8291C;">+</span></span>
+            <span style="font-size:10px;color:#888888;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:5px;font-family:'Helvetica Neue',Arial,sans-serif;">Gov&rsquo;t Projects</span>
+          </td>
+          <td align="center" width="25%" style="text-align:center;padding:0 8px;">
+            <span style="font-size:28px;font-weight:900;color:#FFFFFF;display:block;line-height:1;font-family:'Helvetica Neue',Arial,sans-serif;">18<span style="color:#E8291C;">+</span></span>
+            <span style="font-size:10px;color:#888888;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:5px;font-family:'Helvetica Neue',Arial,sans-serif;">Years Experience</span>
+          </td>
+          <td align="center" width="25%" style="text-align:center;padding:0 8px;">
+            <span style="font-size:28px;font-weight:900;color:#FFFFFF;display:block;line-height:1;font-family:'Helvetica Neue',Arial,sans-serif;">360<span style="color:#E8291C;">+</span></span>
+            <span style="font-size:10px;color:#888888;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:5px;font-family:'Helvetica Neue',Arial,sans-serif;">Completed Projects</span>
+          </td>
+          <td align="center" width="25%" style="text-align:center;padding:0 8px;">
+            <span style="font-size:28px;font-weight:900;color:#FFFFFF;display:block;line-height:1;font-family:'Helvetica Neue',Arial,sans-serif;">1.5<span style="color:#E8291C;">M+</span></span>
+            <span style="font-size:10px;color:#888888;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:5px;font-family:'Helvetica Neue',Arial,sans-serif;">Participants Reached</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-  <!-- SECTION 03 — INDUSTRY INSIGHT -->
-  <div class="insight-section">
-    <div class="insight-eyebrow">Section 03 — Industry Insight</div>
-    <div class="insight-topic-tag">HK Smart Retail & Gov't Promotions</div>
-    <img class="insight-image" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/MQNwsWpthVwnOurf.jpg" alt="HK Smart Retail & Gov't Promotions">
-    <div class="insight-title">HK's Smart Retail Boom: Gov't Promotion Opportunities</div>
-    <div class="insight-punchline">Unlock the power of Hong Kong's digital retail evolution for impactful government campaigns.</div>
-    <div class="insight-body"><p>Hong Kong's digital payment landscape is rapidly expanding, with the total transaction value projected to reach USD 111.70 billion by 2025 [1]. This significant growth, fueled by government initiatives like the Faster Payment System (FPS) and e-voucher schemes, is transforming the retail sector. Consumers are increasingly embracing contactless payments, mobile POS solutions, and e-commerce, moving away from traditional cash usage. This trend presents unique opportunities for government-linked promotions to engage citizens and support local businesses.</p>
-<ul>
-<li>Leverage established digital payment platforms (e.g., Octopus, FPS) for seamless public service transactions and campaign payouts.</li>
-<li>Utilize smart retail data analytics to design highly targeted and effective promotional campaigns that resonate with modern consumers.</li>
-<li>Partner with retailers to encourage AI adoption and digital transformation, fostering a more dynamic and resilient local economy.</li>
-<li>Develop integrated online-to-offline (O2O) experiences for government-linked events, enhancing citizen engagement and convenience.</li>
-</ul>
-<p>Source: [1] Theseus Solutions, "The Rise of Digital Payments in Hong Kong’s Trade Sector", 2025.</p></div>
-  </div>
+  <!-- SECTION 03 — INSIGHT -->
+  <tr>
+    <td bgcolor="#FAFAFA" style="background-color:#FAFAFA;padding:32px;border-top:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;">
+      <p style="margin:0 0 6px 0;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#BBBBBB;font-family:'Helvetica Neue',Arial,sans-serif;">SECTION 03 &mdash; INDUSTRY INSIGHT</p>
+      <div style="display:inline-block;background-color:#E8291C;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;margin-bottom:14px;font-family:'Helvetica Neue',Arial,sans-serif;">HK Smart Retail & Gov't Promotions</div>
+      <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/MQNwsWpthVwnOurf.jpg" alt="HK Smart Retail & Gov't Promotions" width="556" style="display:block;width:100%;max-width:556px;height:auto;margin-bottom:18px;object-fit:cover;">
+      <h2 style="margin:0 0 8px 0;font-size:20px;font-weight:900;color:#111111;line-height:1.3;font-family:'Helvetica Neue',Arial,sans-serif;">HK's Smart Retail Boom: Gov't Promotion Opportunities</h2>
+      <div style="margin-bottom:16px;padding-left:12px;border-left:3px solid #E8291C;">
+        <p style="margin:0;font-size:13px;color:#666666;font-style:italic;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Unlock the power of Hong Kong's digital retail evolution for impactful government campaigns.</p>
+      </div>
+      <div><p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Hong Kong's digital payment landscape is rapidly expanding, with the total transaction value projected to reach USD 111.70 billion by 2025 [1]. This significant growth, fueled by government initiatives like the Faster Payment System (FPS) and e-voucher schemes, is transforming the retail sector. Consumers are increasingly embracing contactless payments, mobile POS solutions, and e-commerce, moving away from traditional cash usage. This trend presents unique opportunities for government-linked promotions to engage citizens and support local businesses.</p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:10px 0;"><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Leverage established digital payment platforms (e.g., Octopus, FPS) for seamless public service transactions and campaign payouts.</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Utilize smart retail data analytics to design highly targeted and effective promotional campaigns that resonate with modern consumers.</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Partner with retailers to encourage AI adoption and digital transformation, fostering a more dynamic and resilient local economy.</td>
+            </tr><tr>
+              <td width="18" valign="top" style="padding:0 6px 4px 0;font-size:13px;color:#E8291C;font-weight:bold;font-family:'Helvetica Neue',Arial,sans-serif;">→</td>
+              <td style="padding:0 0 4px 0;font-size:12px;color:#444444;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Develop integrated online-to-offline (O2O) experiences for government-linked events, enhancing citizen engagement and convenience.</td>
+            </tr></table>
+<p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">Source: [1] Theseus Solutions, "The Rise of Digital Payments in Hong Kong’s Trade Sector", 2025.</p></div>
+    </td>
+  </tr>
 
   <!-- SECTION 04 — WHY FIREBEAN -->
-  <div class="agency-cta-section">
-    <div class="agency-cta-eyebrow">Section 04 — Why Firebean</div>
-    <img class="agency-cta-image" src="There is a common assumption in government procurement that innovation requires premium budget. Firebean's 18 years of experience — serving both commercial lifestyle brands with tight marketing budgets and government departments with fixed tender envelopes — has taught us the opposite.
+  <tr>
+    <td bgcolor="#FFFFFF" style="background-color:#FFFFFF;padding:36px 32px;border-top:4px solid #E8291C;">
+      <p style="margin:0 0 8px 0;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#E8291C;font-family:'Helvetica Neue',Arial,sans-serif;">SECTION 04 &mdash; WHY FIREBEAN</p>
+      <img src="There is a common assumption in government procurement that innovation requires premium budget. Firebean's 18 years of experience — serving both commercial lifestyle brands with tight marketing budgets and government departments with fixed tender envelopes — has taught us the opposite.
 
 The most impactful campaigns we have delivered were not defined by their budget. They were defined by the intelligence of their design:
 • Reusing modular systems from previous campaigns to reduce fabrication costs by 30–40%
@@ -240,46 +254,91 @@ The most impactful campaigns we have delivered were not defined by their budget.
 • Leveraging digital content to extend physical reach without additional venue costs
 • Designing for social sharing to generate earned media that amplifies paid placements
 
-Innovation is a mindset, not a price tag. And it is available to every government department — regardless of budget size." alt="Firebean Agency">
-    <div class="agency-cta-title">Your Strategic Partner for High-Impact Civic Campaigns</div>
-    <div class="agency-cta-punchline">Innovation Is Not a Budget Line. It's a Design Discipline.</div>
-    <div class="agency-cta-body"><p>The most impressive campaigns we've delivered were not the most expensive. They were the most cleverly designed.</p></div>
-    <div class="contact-box">
-      <div class="contact-box-label">Ready to talk?</div>
-      <a href="mailto:contact@firebean.net">contact@firebean.net →</a>
-    </div>
-    <a class="agency-cta-btn" href="mailto:contact@firebean.net" target="_blank">Get in Touch →</a>
-  </div>
+Innovation is a mindset, not a price tag. And it is available to every government department — regardless of budget size." alt="Firebean Agency" width="556" style="display:block;width:100%;max-width:556px;height:auto;margin-bottom:22px;object-fit:cover;">
+      <h2 style="margin:0 0 10px 0;font-size:22px;font-weight:900;color:#111111;line-height:1.25;font-family:'Helvetica Neue',Arial,sans-serif;">Your Strategic Partner for High-Impact Civic Campaigns</h2>
+      <div style="margin-bottom:16px;padding-left:12px;border-left:3px solid #E8291C;">
+        <p style="margin:0;font-size:13px;color:#666666;font-style:italic;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">Innovation Is Not a Budget Line. It's a Design Discipline.</p>
+      </div>
+      <div style="margin-bottom:20px;"><p style="margin:0 0 10px 0;font-size:13px;color:#444444;line-height:1.75;font-family:'Helvetica Neue',Arial,sans-serif;">The most impressive campaigns we've delivered were not the most expensive. They were the most cleverly designed.</p></div>
+      <!-- Contact box -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;background-color:#F8F8F6;border-left:3px solid #E8291C;">
+        <tr>
+          <td style="padding:16px;">
+            <p style="margin:0 0 6px 0;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#AAAAAA;font-family:'Helvetica Neue',Arial,sans-serif;">READY TO TALK?</p>
+            <a href="mailto:contact@firebean.net" style="font-size:13px;color:#E8291C;font-weight:700;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">contact@firebean.net &rarr;</a>
+          </td>
+        </tr>
+      </table>
+      <!-- CTA button -->
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td bgcolor="#E8291C" style="background-color:#E8291C;padding:13px 28px;">
+            <a href="https://firebean.net" target="_blank" style="font-size:12px;font-weight:900;letter-spacing:0.15em;text-transform:uppercase;color:#FFFFFF;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;">Explore Our Work &rarr;</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
   <!-- FOOTER -->
-  <div class="email-footer">
-    <div class="footer-logo">
-      <img class="footer-logo-img" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png" alt="Firebean Logo">
-      <div class="footer-logo-text">firebean</div>
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-links">
-      <a href="https://firebean.net" target="_blank">Website</a>
-      <a href="https://firebean.net/work.html" target="_blank">Our Work</a>
-      <a href="mailto:hello@firebean.net">Contact Us</a>
-      <a href="https://firebean.net" target="_blank">公關市場解碼</a>
-    </div>
-    <div class="footer-address">
-      Firebean Limited &nbsp;·&nbsp; Unit A, 23/F, Morrison Plaza, 5-9A Morrison Hill Rd, Wan Chai, Hong Kong<br>
-      Tel: +852 3622 2784 &nbsp;·&nbsp; hello@firebean.net
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-legal">
-      You are receiving this newsletter because you subscribed to <strong style="color:#666666;">公關市場解碼</strong> by Firebean.<br>
-      To ensure delivery, please add <a href="mailto:hello@firebean.net">hello@firebean.net</a> to your address book.<br><br>
-      © 2026 Firebean Limited. All rights reserved.
-    </div>
-    <div class="footer-unsubscribe">
-      <a href="#">Unsubscribe</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a>
-    </div>
-  </div>
+  <tr>
+    <td bgcolor="#F5F5F3" style="background-color:#F5F5F3;padding:28px 32px 24px;border-top:3px solid #E8291C;">
+      <!-- Logo -->
+      <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:18px;">
+        <tr>
+          <td valign="middle" style="padding-right:8px;">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png" alt="Firebean" width="28" height="28" style="display:block;width:28px;height:28px;object-fit:contain;">
+          </td>
+          <td valign="middle">
+            <span style="font-size:14px;font-weight:300;color:#111111;letter-spacing:0.25em;font-family:'Helvetica Neue',Arial,sans-serif;">FIREBEAN</span>
+          </td>
+        </tr>
+      </table>
+      <!-- Divider -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:16px 0;">
+        <tr><td style="border-top:1px solid #E0E0E0;height:1px;font-size:0;line-height:0;">&nbsp;</td></tr>
+      </table>
+      <!-- Links -->
+      <p style="margin:0 0 14px 0;font-size:11px;color:#666666;font-family:'Helvetica Neue',Arial,sans-serif;">
+        <a href="https://firebean.net" target="_blank" style="color:#666666;text-decoration:none;">Website</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="https://firebean.net/work.html" target="_blank" style="color:#666666;text-decoration:none;">Our Work</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="mailto:hello@firebean.net" style="color:#666666;text-decoration:none;">Contact Us</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="https://firebean.net" target="_blank" style="color:#666666;text-decoration:none;">&#20844;&#38364;&#24066;&#22580;&#35299;&#30908;</a>
+      </p>
+      <!-- Address -->
+      <p style="margin:0 0 14px 0;font-size:11px;color:#888888;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">
+        Firebean Limited &nbsp;&middot;&nbsp; Unit A, 23/F, Morrison Plaza, 5-9A Morrison Hill Rd, Wan Chai, Hong Kong<br>
+        Tel: +852 3622 2784 &nbsp;&middot;&nbsp; hello@firebean.net
+      </p>
+      <!-- Divider -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:16px 0;">
+        <tr><td style="border-top:1px solid #E0E0E0;height:1px;font-size:0;line-height:0;">&nbsp;</td></tr>
+      </table>
+      <!-- Legal -->
+      <p style="margin:0 0 10px 0;font-size:10px;color:#AAAAAA;line-height:1.6;font-family:'Helvetica Neue',Arial,sans-serif;">
+        You are receiving this newsletter because you subscribed to <strong style="color:#666666;">&#20844;&#38364;&#24066;&#22580;&#35299;&#30908;</strong> by Firebean.<br>
+        To ensure delivery, please add <a href="mailto:hello@firebean.net" style="color:#888888;">hello@firebean.net</a> to your address book.<br><br>
+        &copy; 2026 Firebean Limited. All rights reserved.
+      </p>
+      <p style="margin:0;font-size:10px;color:#AAAAAA;font-family:'Helvetica Neue',Arial,sans-serif;">
+        <a href="#" style="color:#888888;text-decoration:underline;">Unsubscribe</a>
+        &nbsp;|&nbsp;
+        <a href="#" style="color:#888888;text-decoration:underline;">Privacy Policy</a>
+        &nbsp;|&nbsp;
+        <a href="#" style="color:#888888;text-decoration:underline;">Terms of Service</a>
+      </p>
+    </td>
+  </tr>
 
-</div>
-</div>
+</table>
+<!-- END EMAIL CONTAINER -->
+
+</td></tr>
+</table>
+<!-- END OUTER WRAPPER -->
+
 </body>
 </html>
