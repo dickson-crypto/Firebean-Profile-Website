@@ -9,10 +9,10 @@
     /* ============================================================
        FIREBEAN EDM — ISSUE 001
        Design: Montblanc-inspired luxury editorial × Firebean bold identity
-       Optimised for: Web preview (this file) + Gmail inline (edm_001_gmail.html)
+       Accent: Firebean Red (#E8291C)
     ============================================================ */
 
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -54,8 +54,8 @@
     /* ── Header / Logo bar ── */
     .email-header {
       background-color: #111111;
-      padding: 28px 32px 24px;
-      border-bottom: 1px solid #2A2A2A;
+      padding: 22px 32px 20px;
+      border-bottom: 3px solid #E8291C;
     }
     .header-inner {
       display: flex;
@@ -67,26 +67,18 @@
       align-items: center;
       gap: 10px;
     }
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      background-color: #39FF14;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: 900;
-      color: #111111;
-      letter-spacing: -0.05em;
-      flex-shrink: 0;
+    .logo-icon-img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
     }
     .logo-text {
       font-size: 18px;
-      font-weight: 900;
+      font-weight: 300;
       color: #FFFFFF;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      text-transform: lowercase;
+      font-variant: small-caps;
     }
     .header-issue {
       font-size: 11px;
@@ -96,7 +88,7 @@
       line-height: 1.5;
     }
     .header-issue strong {
-      color: #39FF14;
+      color: #E8291C;
       display: block;
       font-size: 13px;
     }
@@ -119,13 +111,13 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 60%);
+      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0) 65%);
       padding: 40px 32px 28px;
     }
     .hero-tag {
       display: inline-block;
-      background-color: #39FF14;
-      color: #111111;
+      background-color: #E8291C;
+      color: #FFFFFF;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.15em;
@@ -146,7 +138,7 @@
     .issue-intro {
       background-color: #111111;
       padding: 0 32px 32px;
-      border-bottom: 3px solid #39FF14;
+      border-bottom: 3px solid #E8291C;
     }
     .issue-intro p {
       font-size: 14px;
@@ -181,7 +173,6 @@
       padding: 20px 32px 32px;
       border-bottom: 1px solid #F0F0F0;
     }
-    .case-card:last-of-type { border-bottom: none; }
 
     .case-meta {
       display: flex;
@@ -197,6 +188,9 @@
       color: #FFFFFF;
       background-color: #111111;
       padding: 3px 8px;
+    }
+    .case-tag-lifestyle {
+      background-color: #555555;
     }
     .case-client {
       font-size: 11px;
@@ -215,9 +209,7 @@
       display: block;
       height: 240px;
       object-fit: cover;
-      transition: transform 0.4s ease;
     }
-    .case-image:hover { transform: scale(1.02); }
 
     .case-title {
       font-size: 20px;
@@ -234,7 +226,7 @@
       line-height: 1.6;
       margin-bottom: 14px;
       padding-left: 12px;
-      border-left: 3px solid #39FF14;
+      border-left: 3px solid #E8291C;
     }
     .case-body {
       font-size: 13px;
@@ -272,7 +264,7 @@
       content: '→';
       position: absolute;
       left: 0;
-      color: #39FF14;
+      color: #E8291C;
       font-weight: 700;
     }
     .case-cta {
@@ -285,10 +277,10 @@
       text-transform: uppercase;
       padding: 10px 20px;
       text-decoration: none;
-      transition: all 0.2s ease;
     }
     .case-cta:hover {
-      background-color: #111111;
+      background-color: #E8291C;
+      border-color: #E8291C;
       color: #FFFFFF;
     }
 
@@ -297,9 +289,36 @@
       background-color: #111111;
       height: 4px;
     }
-    .divider-strip.green {
-      background-color: #39FF14;
+    .divider-strip.red {
+      background-color: #E8291C;
       height: 2px;
+    }
+
+    /* ── Stats strip ── */
+    .stats-strip {
+      background-color: #F8F8F6;
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #E0E0E0;
+      border-bottom: 1px solid #E0E0E0;
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-size: 28px;
+      font-weight: 900;
+      color: #111111;
+      line-height: 1;
+      display: block;
+    }
+    .stat-number span { color: #E8291C; }
+    .stat-label {
+      font-size: 10px;
+      color: #888888;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 4px;
     }
 
     /* ── Insight section ── */
@@ -318,8 +337,8 @@
     }
     .insight-topic-tag {
       display: inline-block;
-      background-color: #111111;
-      color: #39FF14;
+      background-color: #E8291C;
+      color: #FFFFFF;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -348,7 +367,7 @@
       line-height: 1.6;
       margin-bottom: 16px;
       padding-left: 12px;
-      border-left: 3px solid #39FF14;
+      border-left: 3px solid #E8291C;
     }
     .insight-body {
       font-size: 13px;
@@ -373,7 +392,7 @@
       content: '▸';
       position: absolute;
       left: 0;
-      color: #39FF14;
+      color: #E8291C;
     }
     .insight-source {
       font-size: 11px;
@@ -400,7 +419,7 @@
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #39FF14;
+      color: #E8291C;
       margin-bottom: 8px;
     }
     .agency-cta-title {
@@ -417,7 +436,7 @@
       line-height: 1.6;
       margin-bottom: 16px;
       padding-left: 12px;
-      border-left: 2px solid #39FF14;
+      border-left: 2px solid #E8291C;
     }
     .agency-cta-body {
       font-size: 13px;
@@ -443,50 +462,22 @@
       content: '→';
       position: absolute;
       left: 0;
-      color: #39FF14;
+      color: #E8291C;
     }
     .agency-cta-btn {
       display: inline-block;
-      background-color: #39FF14;
-      color: #111111;
+      background-color: #E8291C;
+      color: #FFFFFF;
       font-size: 12px;
       font-weight: 900;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       padding: 13px 28px;
       text-decoration: none;
-      transition: all 0.2s ease;
     }
     .agency-cta-btn:hover {
       background-color: #FFFFFF;
       color: #111111;
-    }
-
-    /* ── Stats strip ── */
-    .stats-strip {
-      background-color: #F8F8F6;
-      padding: 24px 32px;
-      display: flex;
-      justify-content: space-around;
-      border-top: 1px solid #E0E0E0;
-      border-bottom: 1px solid #E0E0E0;
-    }
-    .stat-item { text-align: center; }
-    .stat-number {
-      font-size: 28px;
-      font-weight: 900;
-      color: #111111;
-      line-height: 1;
-      display: block;
-    }
-    .stat-number span { color: #39FF14; }
-    .stat-label {
-      font-size: 10px;
-      color: #888888;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      display: block;
-      margin-top: 4px;
     }
 
     /* ── Footer ── */
@@ -500,24 +491,18 @@
       gap: 8px;
       margin-bottom: 20px;
     }
-    .footer-logo-icon {
-      width: 24px;
-      height: 24px;
-      background-color: #39FF14;
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 900;
-      color: #111111;
+    .footer-logo-img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
     }
     .footer-logo-text {
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 300;
       color: #FFFFFF;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      text-transform: lowercase;
+      font-variant: small-caps;
     }
     .footer-divider {
       height: 1px;
@@ -536,7 +521,7 @@
       text-decoration: none;
       letter-spacing: 0.05em;
     }
-    .footer-links a:hover { color: #39FF14; }
+    .footer-links a:hover { color: #E8291C; }
     .footer-address {
       font-size: 11px;
       color: #666666;
@@ -588,8 +573,12 @@
   <div class="email-header">
     <div class="header-inner">
       <div class="logo-block">
-        <div class="logo-icon">F</div>
-        <div class="logo-text">Firebean</div>
+        <img
+          class="logo-icon-img"
+          src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png"
+          alt="Firebean Logo"
+        >
+        <div class="logo-text">firebean</div>
       </div>
       <div class="header-issue">
         <strong>公關市場解碼</strong>
@@ -604,7 +593,7 @@
   <div class="hero-section">
     <img
       class="hero-image"
-      src="https://drive.google.com/uc?id=12rHxONJ-afG7oyAIIA9UE1QER_ug4sgH&export=view"
+      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/DpwfdDKaHKLsJGji.jpg"
       alt="Education Bureau — A Voyage with Books Exhibition at Times Square"
     >
     <div class="hero-overlay">
@@ -635,8 +624,8 @@
     <div class="case-image-wrap">
       <img
         class="case-image"
-        src="https://drive.google.com/uc?id=12rHxONJ-afG7oyAIIA9UE1QER_ug4sgH&export=view"
-        alt="A Voyage with Books — Tram Installation at Times Square"
+        src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/DpwfdDKaHKLsJGji.jpg"
+        alt="A Voyage with Books — Multimodal Reading Resources Exhibition at Times Square"
       >
     </div>
 
@@ -660,7 +649,7 @@
     <a class="case-cta" href="https://firebean.net/work.html#FB2026048" target="_blank">View Full Case Study →</a>
   </div>
 
-  <div class="divider-strip green"></div>
+  <div class="divider-strip red"></div>
 
   <!-- ═══════════════════════════════════════════
        SECTION 2 — CASE STUDY: COMMERCIAL
@@ -672,15 +661,15 @@
 
   <div class="case-card">
     <div class="case-meta">
-      <div class="case-tag" style="background-color:#555555;">Lifestyle &amp; Consumer</div>
+      <div class="case-tag case-tag-lifestyle">Lifestyle &amp; Consumer</div>
       <div class="case-client">K-palette Hong Kong</div>
     </div>
 
     <div class="case-image-wrap">
       <img
         class="case-image"
-        src="https://drive.google.com/uc?id=1Uk-H7D7Fi_XUnPdSrxpq9V4amTX5lUwh&export=view"
-        alt="K-palette 25DAYS TATTOO Summer Festival Pop-Up at LOG-ON"
+        src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/PUWKZCdakQWqPHJm.jpg"
+        alt="K-palette 25DAYS TATTOO Summer Festival Pop-Up at LOG-ON Fashion Walk"
       >
     </div>
 
@@ -774,7 +763,7 @@
     <div class="agency-cta-punchline">When budget accountability meets creative excellence, you need a partner who has done it before — many times over.</div>
 
     <div class="agency-cta-body">
-      <p>Firebean has delivered over <strong style="color:#39FF14;">53 government and public sector campaigns</strong> across Hong Kong — from the Education Bureau and Department of Justice to the Security Bureau and Housing Authority. We understand the unique demands of public sector procurement: tender compliance, budget transparency, measurable outcomes, and creative excellence within defined parameters.</p>
+      <p>Firebean has delivered over <strong style="color:#E8291C;">53 government and public sector campaigns</strong> across Hong Kong — from the Education Bureau and Department of Justice to the Security Bureau and Housing Authority. We understand the unique demands of public sector procurement: tender compliance, budget transparency, measurable outcomes, and creative excellence within defined parameters.</p>
       <p><strong style="color:#FFFFFF;">Our value proposition:</strong></p>
       <ul>
         <li>Proven track record with HKSAR departments across all major bureaux</li>
@@ -792,8 +781,12 @@
   ═══════════════════════════════════════════ -->
   <div class="email-footer">
     <div class="footer-logo">
-      <div class="footer-logo-icon">F</div>
-      <div class="footer-logo-text">Firebean</div>
+      <img
+        class="footer-logo-img"
+        src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663437368766/OXsmmaNIDdCdSALu.png"
+        alt="Firebean Logo"
+      >
+      <div class="footer-logo-text">firebean</div>
     </div>
 
     <div class="footer-divider"></div>
