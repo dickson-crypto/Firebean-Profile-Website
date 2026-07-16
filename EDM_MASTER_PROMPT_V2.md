@@ -31,7 +31,7 @@ This is a **weekly EDM** (Electronic Direct Mail) series called **"PR MARKET DEC
 |---|---|
 | GitHub repo | `dickson-crypto/Firebean-Profile-Website` |
 | EDM folder | `/edm/` |
-| Live base URL | `https://dickson-crypto.github.io/Firebean-Profile-Website/edm/` |
+| Live base URL | `https://firebean.net/edm/` |
 | Canonical template | `edm/edm_001.html` (Issue 001 — fully built, QA-passed) |
 | Gmail converter | `edm/build_legacy_gmail.py` |
 | Committed images | `edm/email-img/` |
@@ -84,7 +84,7 @@ Search these official sources for current exhibitions, public programmes, or gov
 - 1 body paragraph (60–80 words)
 - Official "Learn More" URL (must be a live .gov.hk or lcsd.gov.hk URL)
 
-**Image rule:** Never hotlink government/venue images. Always download → convert to JPG → commit to `edm/email-img/` → reference via GitHub Pages URL: `https://dickson-crypto.github.io/Firebean-Profile-Website/edm/email-img/[filename].jpg`
+**Image rule:** Never hotlink government/venue images. Always download → convert to JPG → commit to `edm/email-img/` → reference via GitHub Pages URL: `https://firebean.net/edm/email-img/[filename].jpg`
 
 ---
 
@@ -222,7 +222,7 @@ Then update `edm/index.html` — add a new card:
 ```
 
 Wait ~60 seconds for GitHub Pages to deploy, then verify:
-`https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_NNN.html`
+`https://firebean.net/edm/edm_NNN.html`
 
 ---
 
@@ -288,9 +288,9 @@ FB2026048, FB2026010, FB2026009, FB2026067, FB2026012, FB2025999, FB2025771, FB2
 
 | Resource | URL |
 |---|---|
-| Live EDM index | https://dickson-crypto.github.io/Firebean-Profile-Website/edm/index.html |
-| Issue 001 (canonical template, web) | https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_001.html |
-| Issue 001 (gmail version) | https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_001_gmail.html |
+| Live EDM index | https://firebean.net/edm/index.html |
+| Issue 001 (canonical template, web) | https://firebean.net/edm/edm_001.html |
+| Issue 001 (gmail version) | https://firebean.net/edm/edm_001_gmail.html |
 | Raw template HTML | https://raw.githubusercontent.com/dickson-crypto/Firebean-Profile-Website/main/edm/edm_001.html |
 | build_legacy_gmail.py | https://raw.githubusercontent.com/dickson-crypto/Firebean-Profile-Website/main/edm/build_legacy_gmail.py |
 | Master Google Sheet | https://docs.google.com/spreadsheets/d/1Ms1Q1i7uJg0ilvW4g1PezBm7mTCNKcYJT_c5-weUBNc/edit |

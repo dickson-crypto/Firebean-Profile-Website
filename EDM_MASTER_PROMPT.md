@@ -16,7 +16,7 @@ You are continuing the production of **Firebean's weekly EDM series** titled **"
 - Contact: hello@firebean.net | +852 3622 2784
 - Address: Unit A, 23/F, Morrison Plaza, 5-9A Morrison Hill Rd, Wan Chai, Hong Kong
 - GitHub (EDM hosting): https://github.com/dickson-crypto/Firebean-Profile-Website
-- Live EDM index: https://dickson-crypto.github.io/Firebean-Profile-Website/edm/index.html
+- Live EDM index: https://firebean.net/edm/index.html
 
 ---
 
@@ -55,8 +55,8 @@ The file ID is extracted from the Drive Folder Link. List files in the folder an
 
 ### 2D. Existing EDM HTML Files (Reference Templates)
 All 24 issues already exist in the GitHub repo. Use Issue #1 as the canonical template:
-- **Web version:** https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_001.html
-- **Gmail version:** https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_001_gmail.html
+- **Web version:** https://firebean.net/edm/edm_001.html
+- **Gmail version:** https://firebean.net/edm/edm_001_gmail.html
 - **Raw HTML (web):** https://raw.githubusercontent.com/dickson-crypto/Firebean-Profile-Website/main/edm/edm_001.html
 - **Raw HTML (gmail):** https://raw.githubusercontent.com/dickson-crypto/Firebean-Profile-Website/main/edm/edm_001_gmail.html
 
@@ -156,7 +156,7 @@ Every EDM issue requires TWO HTML files:
 #### File 2: Gmail/Email Version (`edm_NNN_gmail.html`)
 - **Purpose:** Paste-ready HTML for Gmail, Mailchimp, Klaviyo, or any ESP
 - **Rendering:** Div-based with inline CSS (no `<style>` blocks except for `@media` queries and `::before` pseudo-elements)
-- **Pre-header link:** `https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_NNN.html`
+- **Pre-header link:** `https://firebean.net/edm/edm_NNN.html`
 - **Hero image technique:** `<img>` tag with absolute-positioned overlay div
 - **Bullet lists:** `<ul>` with `list-style:none` and CSS `::before` pseudo-element (→ for case studies, ▸ for insights)
 - **Mobile responsive:** `@media (max-width: 640px)` breakpoints for font sizes and layout
@@ -304,7 +304,7 @@ FB2026059, FB2026058, FB2026057, FB2024001, FB2026019, FB2024002, FB2023998, FB2
 2. Create `edm_NNN_gmail.html` (Gmail version) in `/edm/` folder
 3. Add new card to `/edm/index.html` grid
 4. Commit and push to `main` branch
-5. GitHub Pages auto-deploys to `https://dickson-crypto.github.io/Firebean-Profile-Website/edm/`
+5. GitHub Pages auto-deploys to `https://firebean.net/edm/`
 
 ### Git Commands
 ```bash
@@ -406,8 +406,8 @@ Before committing any EDM to GitHub, verify:
 ## 12. EXAMPLE ISSUE FOR REFERENCE
 
 **Issue #1 — Complete Reference**
-- Web: https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_001.html
-- Gmail: https://dickson-crypto.github.io/Firebean-Profile-Website/edm/edm_001_gmail.html
+- Web: https://firebean.net/edm/edm_001.html
+- Gmail: https://firebean.net/edm/edm_001_gmail.html
 - Subject: "Beyond Information: How HK's Best Campaigns Turn Policy into Experience"
 - S1: Education Bureau — A Voyage with Books (FB2026048)
 - S2: K-palette Summer Festival Pop-up (FB2026059)

@@ -19,7 +19,7 @@ Run from the `edm/` directory:  python3 build_legacy_gmail.py
 import os
 import re
 
-PAGES = "https://dickson-crypto.github.io/Firebean-Profile-Website/edm/email-img/"
+PAGES = "https://firebean.net/edm/email-img/"
 WEBP_RE = re.compile(r"https://firebean\.net/data/images/([^\"'\s)]+)\.webp")
 GRADIENT_RE = re.compile(r"background:linear-gradient[^;]*;background-color:rgba[^;]*;")
 FLOAT_IMG_RE = re.compile(r'<img align="right"(?P<rest>[^>]*?)/>')
