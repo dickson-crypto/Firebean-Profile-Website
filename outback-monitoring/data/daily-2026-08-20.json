@@ -1,0 +1,114 @@
+{
+  "date": "2026-08-20",
+  "report_type": "daily_discovery_run",
+  "generated_at": "2026-08-20T08:20:00Z",
+  "items": [
+    {
+      "title": "Outback下午茶優惠HK$128兩款小食超值推介",
+      "summary": "Instagram用戶@dimplenual分享Outback下午茶優惠，HK$128可選兩款小食，比單點HK$98更抵食，評價超值。",
+      "source": "Instagram",
+      "platform_type": "社交媒體",
+      "author": "dimplenual",
+      "date": "2026-08-17",
+      "time": "14:00",
+      "link": "https://www.instagram.com/p/DcImqcqkwqu/",
+      "sentiment": "positive",
+      "tags": ["Price", "Value", "Afternoon Tea"],
+      "verification": "Direct public post verified"
+    },
+    {
+      "title": "將軍澳中心七夕約會指南推介Outback鋸扒",
+      "summary": "將軍澳中心Park Central七夕浪漫約會指南，推介Outback Steakhouse (Shop G43)浪漫之夜鋸扒，肉香濃郁油花均勻，最啱牛扒愛好者。",
+      "source": "Instagram (Park Central)",
+      "platform_type": "社交媒體",
+      "author": "Park Central TKO",
+      "date": "2026-08-18",
+      "time": "12:00",
+      "link": "https://www.instagram.com/p/DcLPbG4HPXr/",
+      "sentiment": "positive",
+      "tags": ["PR", "Brand Visibility", "Promotion", "Chinese Valentine"],
+      "verification": "Direct public post verified"
+    },
+    {
+      "title": "Outback官方IG發佈「OutBackrooms」創意短片",
+      "summary": "Outback HK官方Instagram發佈創意行銷短片「OutBackrooms」，以密室逃脫風格推廣品牌，展示創新社交媒體策略。",
+      "source": "Instagram (Official)",
+      "platform_type": "官方",
+      "author": "@outbacksteakhousehk",
+      "date": "2026-08-20",
+      "time": "08:00",
+      "link": "https://www.instagram.com/outbacksteakhousehk/reel/DcQSmmklBqq/",
+      "sentiment": "positive",
+      "tags": ["PR", "Marketing", "Creative Content"],
+      "verification": "Official account verified"
+    },
+    {
+      "title": "Outback官方FB發佈「OutBackrooms」Level 0影片",
+      "summary": "Outback HK官方Facebook同步發佈「Level 0: OutBackrooms」創意影片內容，配合Instagram同步推廣。",
+      "source": "Facebook (Official)",
+      "platform_type": "官方",
+      "author": "Outback HK Official",
+      "date": "2026-08-20",
+      "time": "08:00",
+      "link": "https://www.facebook.com/outbacksteakhousehk",
+      "sentiment": "positive",
+      "tags": ["PR", "Marketing", "Creative Content"],
+      "verification": "Official page verified"
+    },
+    {
+      "title": "MOKO旺角店負評 - 黑毛豬扒乾柴失望",
+      "summary": "OpenRice用戶abbyn9食評：叫咗黑毛豬扒七成熟，上枱時已經唔熱，乾柴好似瘦煲湯肉，極度失望，以後唔去。",
+      "source": "OpenRice",
+      "platform_type": "食評平台",
+      "author": "abbyn9",
+      "date": "2026-08-16",
+      "time": "12:00",
+      "link": "https://s.openrice.com/QrbT0mFrZ00",
+      "sentiment": "negative",
+      "tags": ["Food Quality", "Service", "MOKO"],
+      "verification": "Direct OpenRice review verified"
+    },
+    {
+      "title": "帶阿媽食牛扒 - Outback用餐分享",
+      "summary": "Instagram用戶@rocketdive1175分享帶媽媽到Outback食牛扒，提及美國安格斯肉眼扒及季度限定虎蝦拼牛柳，正面用餐體驗。",
+      "source": "Instagram",
+      "platform_type": "社交媒體",
+      "author": "@rocketdive1175",
+      "date": "2026-08-16",
+      "time": "12:00",
+      "link": "https://www.instagram.com/p/DcEfnrLE4wX/",
+      "sentiment": "positive",
+      "tags": ["Food", "Family Dining"],
+      "verification": "Direct public post verified"
+    },
+    {
+      "title": "Bloomin' Brands Q2營收超預期 - Outback母公司股價漲18%",
+      "summary": "Bloomin' Brands旗下Outback Steakhouse Q2營收10.2億美元，年增1.3%超預期，股價漲18%。間接影響香港業務信心。",
+      "source": "財經新聞 (Taiwan)",
+      "platform_type": "新聞媒體",
+      "author": "cmnews.com.tw",
+      "date": "2026-08-20",
+      "time": "08:00",
+      "link": "https://cmnews.com.tw/article/heyurui-455ff387-9c32-11f1-9208-9de7248e9cd0",
+      "sentiment": "positive",
+      "tags": ["Corporate", "Financial"],
+      "verification": "Published financial news verified",
+      "notes": "HK Relevance: Indirect (parent company)"
+    }
+  ],
+  "alerts": [
+    {
+      "type": "pr_opportunity",
+      "message": "Outback HK launched creative 'OutBackrooms' campaign across IG and FB - monitor engagement metrics"
+    },
+    {
+      "type": "negative_review",
+      "message": "OpenRice MOKO negative review about cold/dry pork chop - may need operational follow-up"
+    },
+    {
+      "type": "corporate",
+      "message": "Parent company Bloomin' Brands Q2 beat expectations, stock +18% - positive corporate backdrop"
+    }
+  ],
+  "summary": "2026-08-20 — 7 條mention (正面:5 中性:0 負面:1 企業:1) | 新增官方OutBackrooms創意行銷、Park Central七夕推介、下午茶好評、MOKO豬扒負評、母公司Q2超預期"
+}
