@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-21",
+  "report_type": "daily_verified_snapshot",
+  "generated_at": "2026-08-21T09:26:48.722Z",
+  "source_of_truth": "https://outbackdash-zelnsfxp.manus.space/",
+  "item_count": 2,
+  "items": [
+    {
+      "date": "2026-08-19",
+      "time": "16:33",
+      "source": "LinkedIn (Eber)",
+      "platformType": "社交媒體",
+      "title": "Eber以Outback HK說明品牌一致性需由營運支撐",
+      "summary": "Eber的公開LinkedIn帖文以Outback Steakhouse Hong Kong及Patrick Kwok為明確關聯，提出門店、POS與App若未能協調，行銷活動亦不足以維持一致品牌體驗；帖文屬一般營運與CRM觀點，未指稱Outback實際發生系統失誤。",
+      "link": "https://www.linkedin.com/posts/eber-loyalty-marketing_operations-brandexperience-restaurantmarketing-activity-7495759720331304960-Npuy",
+      "keyword": "Outback",
+      "sentiment": "neutral",
+      "newActivity": true,
+      "collectedAt": "2026-08-21T08:56:53Z",
+      "notes": "作者: Eber | 主題: PR、Operations、Brand Experience、CRM、Thought Leadership | 驗證: Direct public LinkedIn item verified; page explicitly links Outback Steakhouse Hong Kong and Patrick Kwok. Activity ID decodes to 2026-08-19 16:33:01 HKT. Exact-text Instagram cross-post DcNw3-oCMji excluded. PR Watch: Low—operational alignment commentary; no allegation of an actual Outback failure.",
+      "author": "Eber",
+      "tags": [
+        "PR",
+        "Operations",
+        "Brand Experience",
+        "CRM",
+        "PR Watch"
+      ],
+      "verification": "Direct public LinkedIn item verified. Activity ID decodes to 2026-08-19 16:33:01 HKT; one reaction was visible. Exact-text Instagram cross-post excluded.",
+      "prWatchPriority": "low",
+      "todayRun": true
+    },
+    {
+      "date": "2026-08-16",
+      "time": "全日",
+      "source": "Instagram",
+      "platformType": "社交媒體",
+      "title": "旅客形容香港Outback帶來「回家」感覺",
+      "summary": "Instagram用戶@ajdreamingcorner表示，即使身在香港仍特意到訪Outback Steakhouse，並形容餐廳的澳洲主題、氣氛及食物帶來熟悉和滿足感；帖文包含#hongkong及#香港，屬明確正面UGC。",
+      "link": "https://www.instagram.com/reel/DcGUNpdhHJc/",
+      "keyword": "Outback",
+      "sentiment": "positive",
+      "newActivity": true,
+      "collectedAt": "2026-08-21T08:56:53Z",
+      "notes": "作者: @ajdreamingcorner | 主題: UGC、Brand Experience、Food、Hong Kong | 驗證: Direct public Instagram reel and page metadata verified. Metadata states 6 likes, 0 comments and publication date 2026-08-16. Caption explicitly names Outback Steakhouse, states the author is in Hong Kong, and includes #hongkong and #香港. Backfill discovered 2026-08-21.",
+      "author": "@ajdreamingcorner",
+      "tags": [
+        "UGC",
+        "Brand Experience",
+        "Food",
+        "Hong Kong"
+      ],
+      "verification": "Direct public Instagram reel and page metadata verified. Published 2026-08-16; caption explicitly names Outback Steakhouse and Hong Kong.",
+      "todayRun": true
+    }
+  ],
+  "alerts": [
+    {
+      "severity": "HIGH",
+      "status": "ongoing",
+      "title": "持續高優先級觀察：用戶稱 Outback 用餐後出現不適並求醫",
+      "summary": "18 Aug Threads 作者以個人經歷描述食用沙律、牛扒及草莓奶昔後出現腸胃不適並曾求醫。這是未經獨立核實的個人陳述，不能視為餐廳或食品引致病情的證據；因涉及健康與食品安全觀感，建議依標準客訴流程保存來源並評估私下關懷。",
+      "source": "Threads (Authenticated)",
+      "link": "https://www.threads.com/@bobotang__/post/DcLVyyeGq9V"
+    },
+    {
+      "severity": "MEDIUM",
+      "status": "ongoing",
+      "title": "MOKO食評關注：豬扒上桌不熱及口感乾柴",
+      "summary": "16 Aug OpenRice 食客以個人食評批評MOKO分店黑毛豬扒的溫度及口感。建議向門店核對出餐溫度與產品品質；目前僅為單一顧客意見，不應擴大推論。",
+      "source": "OpenRice",
+      "link": "https://s.openrice.com/QrbT0mFrZ00"
+    },
+    {
+      "severity": "LOW",
+      "status": "new",
+      "title": "Eber營運觀點：品牌一致性需要門店、POS與App協調",
+      "summary": "19 Aug Eber帖文以Outback HK作為營運與CRM討論關聯，屬一般品牌一致性觀點；未指稱Outback實際發生系統失誤，建議列作低優先級產業觀察。",
+      "source": "LinkedIn (Eber)",
+      "link": "https://www.linkedin.com/posts/eber-loyalty-marketing_operations-brandexperience-restaurantmarketing-activity-7495759720331304960-Npuy"
+    }
+  ],
+  "summary": "活躍監測資料範圍維持由 2026 年 8 月 1 日起。本輪新增 2 條經原始頁面核實的香港相關回溯記錄；20 至 21 Aug 主監測窗未發現其他可直接核實的新提及。官方 OutBackrooms Facebook 同文轉載按精確文字去重，非香港的台灣母公司財經報道不納入 Version 2。"
+}
